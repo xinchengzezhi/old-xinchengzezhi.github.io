@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>spring教程（四） | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/lujiao.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="spring教程（四）">
+            
+	            spring教程（四）
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/11</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1    spring day03回顾<br>1.1    事务管理<br>    基于xml配置<br>1.配置事务管理器<br>  jdbc：DataSourceTransactionManager<br>  hibernate：HibernateTransactionManager<br>2.事务通知（详情、属性）<br>&lt;tx:advice id=”” transaction-manager=””&gt;<br>  <a href="tx:attributes" target="_blank" rel="noopener">tx:attributes</a><br>     &lt;tx:method name=”add<em>“&gt;<br>     &lt;tx:method name=”update</em>“&gt;<br>     &lt;tx:method name=”delete<em>“&gt;<br>     &lt;tx:method name=”find</em> read-only=”true”&gt;</p>
+<ol start="3">
+<li>AOP编程，ABCD–&gt; ABC<br><a href="aop:config" target="_blank" rel="noopener">aop:config</a><br>&lt;aop:advisor advice-ref=”txAdvice”  pointcut=”execution(<em> com..</em>.*(..))”&gt;</li>
+</ol>
+<p>    基于注解<br>xml 配置<br>1.事务管理器</p>
+<p>2.将配置事务管理器交予spring<br>&lt;tx:annotation-driven transaction-manager=”….”&gt;</p>
+<p>目标类<br>@Transactional  类 | 方法</p>
+<p>1.2    整合Junit<br>@RunWith(SpringJunit4RnnerClass.class)<br>@ContextConfiguration(locations=”classpath:…xml”)</p>
+<p>@Autowired 注入</p>
+<p>@Test 测试</p>
+<p>1.3    整合web<br>web.xml 配置<br>1.确定xml位置<br>    <context-param><br>        name：contextConfigLocation<br>        value：classpath:…xml<br>2.加载xml文件，配置监听器<br>    ContextLoaderListener</context-param></p>
+<p>1.4    整合</p>
+<ol>
+<li>hibernate po （domain、bean）<br>2.dao层：<br> 需要HibernateTemplate 相当于session操作PO类 –&gt; 必须提供setter方法，让spring注入，xml配置模板<pre><code>save()  update  delete  saveOrUpdate   find
+</code></pre> 继承HibernateDaoSupport，需要注入SessionFactory，底层自动创建模板<pre><code>dao方法中 this.getHibernateTemplate()
+</code></pre>3.service 层，spring配置<br> properties &lt;context:property-placeholder location&gt;<br> 配置数据源：ComboPooledDataSource<br> 配置SessionFactory：LocalSessionFactoryBean<br> 事务管理<br>4.web层 ，aciton<br> struts.xml  <action name="" class="全限定类名"> 前面看到一位struts，底层使用spring<br> 默认与spring整合之后，按照【名称】自动注入</action></li>
+</ol>
+<p>spring day04 – spring day07 ,案例（小项目）<br>day04:  SVN 、搭建环境（完成PO类）<br>day05: 基本功能（struts拦截器、hibernate关联获取）<br>day06: 复杂操作（查询+分页+条件、ajax级联操作）<br>day07: 重写–工具 （BaseDao、BaseAction）</p>
+<p>2    SVN<br>2.1    版本控制<br>2.1.1    什么版本控制<br>    版本控制（Revision Control）：是维护工程蓝图的标准做法，能追踪工程蓝图从诞生一直到定案的过程。是一种记录若干文件内容变化，以便将来查阅特定版本修订情况的系统。也是一种软体工程技巧，籍以在开发的过程中，确保由不同人所编辑的同一档案都得到更新。</p>
+<p>2.1.2    版本控制软件<br>    CVS（Concurrent Versions System）代表协作版本系统或者并发版本系统，是一种版本控制系统，方便软件的开发和使用者协同工作。<br>    VSS （ Visual Source Safe ）只能在windows下,作为 Microsoft Visual Studio 的一名成员，它主要任务就是负责项目文件的管理<br>    Git是用于Linux内核开发的版本控制工具。它采用了分布式版本库的方式，不必服务器端软件支持，使源代码的发布和交流极其方便。Git的速度很快，这对于诸如Linux kernel这样的大项目来说自然很重要。Git最为出色的是它的合并跟踪（merge tracing）能力。<br>    <a href="http://www.github.org" target="_blank" rel="noopener">www.github.org</a><br> 。。。。。。<br>    SVN（Subversion ），是一个开放源代码的版本控制系统，采用了分支管理系统，它的设计目标就是取代CVS。</p>
+<p>2.2    SVN特点<br>    统一的版本号。CVS是对每个文件顺序编排版本号，在某一时间各文件的版本号各不相同。而Subversion下，任何一次提交都会对所有文件增加到同一个新版本号，即使是提交并不涉及的文件。所以，各文件在某任意时间的版本号是相同的。版本号相同的文件构成软件的一个版本。<br>    原子提交。一次提交不管是单个还是多个文件，都是作为一个整体提交的。在这当中发生的意外例如传输中断，不会引起数据库的不完整和数据损坏。<br>    重命名、复制、删除文件等动作都保存在版本历史记录当中。<br>    对于二进制文件，使用了节省空间的保存方法。（简单的理解，就是只保存和上一版本不同之处）<br>    目录也有版本历史。整个目录树可以被移动或者复制，操作很简单，而且能够保留全部版本记录。<br>    分支的开销非常小。<br>    优化过的数据库访问，使得一些操作不必访问数据库就可以做到。这样减少了很多不必要的和数据库主机之间的网络流量。<br>    支持元数据（Metadata）管理。每个目录或文件都可以定义属性（Property），它是一些隐藏的键值对，用户可以自定义属性内容，而且属性和文件内容一样在版本控制范围内。<br>    支持FSFS和Berkeley DB两种资料库格式。<br>    不足：只能设置目录的访问权限，无法设置单个文件的访问权限。 </p>
+<p>2.3    体系结构</p>
+<p>2.4    安装</p>
+<p>    测试安装</p>
+<p>    检查path系统环境变量</p>
+<p>2.5    创建仓库<br>    格式：cmd&gt;  svnadmin create 路径</p>
+<p>    仓库目录结构</p>
+<p>    注意：创建仓库时，目录必须是空的 ，及新建文件夹</p>
+<p>2.6    启动<br>    格式：cmd&gt;  svnserve  -d  -r  仓库的路径<br>    -d后台执行<br>    -r版本库的根目录</p>
+<p>启动时，指定“仓库路径”不同，分类：多仓库和单仓库</p>
+<p>    多仓库【掌握】</p>
+<pre><code>启动：svnserve -d -r 仓库父目录  ，表示启动时多仓库
+例如：svnserve -d -r G:\repository\svn
+访问：svn://localhost:3690/bbs
+</code></pre><p>    单仓库</p>
+<pre><code>启动：svnserve -d -r 仓库的根  ，表示启动时单仓库
+例如：svnserve -d -r G:\repository\svn\bbs
+访问：svn://localhost:3690
+</code></pre><p>    将操作注册成操作系统的“服务”，开机启动。<br>1.“运行”，services.msc 打开“服务”</p>
+<ol start="2">
+<li><p>删除“服务”</p>
+</li>
+<li><p>注册“服务”</p>
+</li>
+</ol>
+<p>sc create svn binpath= “D:\java\Subversion\bin\svnserve.exe –service -r G:\repository\svn” displayname= “SVN-Service” start= auto depend= Tcpip</p>
+<ol start="4">
+<li>启动或停止“服务”</li>
+</ol>
+<p>2.7    操作【掌握 思想】</p>
+<p>2.7.1    checkout<br>    格式：svn  checkout  服务器地址  下载地址</p>
+<p>2.7.2    commit<br>    格式：svn commit  资源</p>
+<p>问题1：没有纳入版本控制</p>
+<pre><code>使用add子命令 添加到本地版本库
+</code></pre><p>问题2：没有编写日志</p>
+<pre><code>采用 -m  参数设置日志信息
+</code></pre><p>问题3：没有权限</p>
+<pre><code>修改权限，设置匿名访问
+    G:\repository\svn\bbs\conf\svnserve.conf
+</code></pre><p>2.7.3    update<br>    格式： svn update</p>
+<p>2.8    图形化：TortoiseSVN 安装</p>
+<p>    安装成功之后，所有的操作都是“右键”</p>
+<p>2.9    svn权限<br>    权限需要3个配置文件</p>
+<p>    svnserve.conf<br>    开启认证</p>
+<p>注意删除空格。<br>    确定账号配置文件位置</p>
+<pre><code>确定认证配置文件位置
+</code></pre><p>    passwd  账号配置 （一行一个账号，账号用户名和密码组成，使用等号分隔）</p>
+<p>    authz 认证配置文件<br>    配置组 ， 格式：组名 = 用户1 ，用户2，….</p>
+<pre><code>认证细节配置
+    多仓库
+        [bbs:/]              --&gt; 确定仓库名称 。[bbs:/doc]  给bbs仓库的doc目录配置权限
+        @itheima = rw    --&gt; 给itheima组设置权限。
+                            read (&apos;r&apos;) ，read-write (&apos;rw&apos;) ，or no access (&apos;&apos;).
+        user3 = r            --&gt; 给user3 指定权限
+        *=                --&gt; 其他用户没有权限
+
+    单仓库
+        [/]                --&gt;当仓库的根  [/doc]  单仓库doc目录
+</code></pre><p>2.10    TortoiseSVN 常见图标</p>
+<p>2.11    myeclipse svn 插件<br>2.11.1    安装插件</p>
+<pre><code>如果3个都不能使用，直接换eclipse
+</code></pre><p>    安装方式1：直接复制</p>
+<pre><code>eclipse插件规范
+    eclipse 目录
+        | -- features目录
+        | -- plugins 目录
+</code></pre><p>    方式2：使用link文件<br>    将插件解压到任意目录（不含中文、空格），在myeclipse/dropins目录添加一个link文件<br>        文件名：自定义<br>        文件扩展名：link<br>        文件内容：<br>            path = 插件完整目录，需要指定到eclipse，及可以看到（features 、 plugins）<br>            例如：<br>                path=D:\java\MyEclipse\MyEclipse 10\svn\eclipse<br>                path=D:/java/MyEclipse/MyEclipse 10/svn/eclipse<br>    方式3：在线安装<br>在eclipse中利用svn轻松提交代码</p>
+<p>    安装成功标志</p>
+<p>2.11.2    操作<br>1、分享项目：</p>
+<p>2、下载分享项目</p>
+<p>代码改完，一般不要直接提交。先于数据库，调试bug,解决冲突，最后提交<br>解决冲突如下：</p>
+<p>回到MyEclipse界面</p>
+<p>2.12    svn目录规范</p>
+<p>trunk  ，主线，用于存放程序整个进度<br>branches ，分支，例如：bug修复、特殊功能等<br>tags，标签（版本），此目录下的内容不能修改</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/07/11/spring教程（六）/" class="pre-post btn btn-default" title='spring总结'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">spring总结</span>
+        </a>
+    
+    
+        <a href="/2018/07/11/spring教程（三）/" class="next-post btn btn-default" title='spring教程（三）'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">spring教程（三）</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

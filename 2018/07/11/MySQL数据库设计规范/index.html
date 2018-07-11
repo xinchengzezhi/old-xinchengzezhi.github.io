@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>MySQL数据库设计规范 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/lujiao.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="MySQL数据库设计规范">
+            
+	            MySQL数据库设计规范
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/11</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1.1.1    引言<br>1.1.1.1    目的<br>为满足公司各项目、各产品能顺利的进行设计和开发实现，并保证各项目、各平台数据库设计的一致性，特制定此规范。<br>主要目的在于：<br>1、    规范、统一数据库设计中的各对象命名。<br>2、    避免由于数据库设计的不合理而影响系统性能。<br>1.1.1.2    适用范围<br>本规范的适用范围为参与公司各项目、各产品开发、设计的所有数据库设计人员、应用程序开发人员及功能测试工程师。<br>1.1.2    命名规范<br>1.1.2.1    命名建议</p>
+<ol>
+<li>语言<br>数据对象、变量的命名都采用英文字符，禁止使用中文/拼音命名。绝对不要在对象名的字符之间留空格。<br>英文单词使用用对象本身意义相对或相近的单词。选择最简单或最通用的单词。不能使用毫不相干的单词来命名。<br>当一个单词不能表达对象含义时，用词组组合，如果组合太长时，采用用简或缩写，缩写要基本能表达原单词的意义。<br>当出现对象名重名时，是不同类型对象时，加类型前缀或后缀以示区别。</li>
+<li>大小写<br>由于操作系统的大小写敏感性决定了数据库名和表名的大小写敏感性，所以建议数据库名全部小写,以方便不同数据库移植，以及避免程序调用问题。</li>
+<li>单词分割<br>命名的各单词之间可以使用下划线进行分隔。</li>
+<li>保留字<br>命名不允许使用SQL保留字。</li>
+<li>命名长度<br>命名均不得超过64个字符的系统限制；<br>字段命名长度不超过15个字符为宜（避免超过20），应该反映数据集所在的业务范围，或者业务功能。<br>1.1.2.2    命名规则</li>
+<li>数据库<br>数据库名采用26个英文字母（区分大小写）和0~9这10个自然数，加上下划线‘¬_’组成，共计63个字符。不能出现其他字符（注释除外）。<br>使用富有意义的英文词汇或者缩写组成，尽量说明是那个应用或者系统在使用的。如：uic。<br>备份数据库名使用正式数据库名加时间组成。如：uic_20150114。</li>
+<li>表<br>使用富有意义的英文词汇或者缩写，多个单词组成的，全部小写。<br>数据表名不要使用不必要的前缀或者后缀，例如使用School，而不是TblSchool，或者SchoolTable等。<br>相关应用的数据表使用同一前缀。如会员中心的表统一前缀为uic。<br>可按照业务功能范围增加前缀，并以”<em>“分隔开来。如：数据库</em>表名（uic¬_member）。<br>只能使用英文字母，数字和下划线，不留空格。</li>
+<li>字段<br>使用单词组合完成。符合骆峰式命名法（Camel-Case）规则，即首字母小写，后面单词的首字母大写。如：buyPrice。<br>不允许使用关键字TYPE或者STATUS等来作为字段名。<br>命名长度不超过15个字符为宜（避免超过20），应该反映数据集所在的业务范围，或者业务功能。</li>
+<li>索引<br>对于普通索引，名称以‘idx_’开头，后连接字段名字。<br>非唯一索引的索引命名格式：idx_tablename_column[column]。<br>唯一索引的索引命名格式：uniq_tablename_column[column]。</li>
+<li>外键<br>‘fk_’+ 关联的表名 + 外键标识（字段）。如：fk_articlc_id。<br>注：只有存储引擎为InnoDB时才支持外键。为防止高并发时出现死锁，尽量不使用外键。</li>
+<li>视图<br>‘v_’+ 视图名。如：v_xxx。</li>
+<li>存储过程<br>‘proc_’+ 存储过程名称。如：proc_xxx。<br>1.1.3    数据库设计建议<br>1、    尽量不在数据库做运算，将负责运算移到程序端进行，尽可能简单应用MySQL。如order by，rand()，md5()等，尽量将运算逻辑放到应用中实现。<br>2、    合理控制单表数据量。一年内单表数据量，纯INT不超1000万行；含CHAR不超过500万行。可按照用户、时间、地区合理的拆分表，防止其超载。<br>3、    建议单库不超过300~400个表。<br>4、    单表字段数控制在20~50之间。<br>5、    平衡范式与冗余。范式越高，表间的关系越多，导致表之间的连接操作越频繁，将直接影响到查询的速度。反规范的好处是降低连接操作的需求、降低外码和索引的数目，还可能减少表的数目，相应带来的问题是可能出现数据的完整性问题。常用的反规范技术有增加冗余列、增加派生列、重新组表和分割表。<br>6、    统一字符集为UTF-8。<br>7、    建议使用InnoDB存储引擎。<br>8、    要经过认证才能访问数据库，不要给每一个用户管理员权限。<br>9、    分割不常使用的数据表到不同的物理存储以获得更好的性能。<br>10、    多花点时间在数据库设计上，否则你将来会付出加倍的时间来偿还。<br>1.1.4    数据库设计最佳实践</li>
+<li>字段<br>1)    当字段类型为枚举或者布尔型时，使用 CHAR(1)（或者CHAR(2)）类型，填写默认值，状态字段的默认值不能为NULL。<br>2)    用尽量少的存储空间来存数一个字段的数据。比如能用INT的就不用CHAR或者VARCHAR；能用TINYINT的就不用INT；能用VARCHAR(20)的就不用VARCHAR(255)；能用DATE的就不用DATETIME。<br>3)    对于字符类型，要根据存储引擎来进行相应的选择。在CHAR和VARCHAR之间，对于InnoDB来说，建议使用VARCHAR类型。<br>4)    BLOB和TEXT值会引起一些性能问题，特别是在执行了大量的删除操作时。最好将BLOB/TEXT列分离到单独的表中。<br>5)    对精度要求较高的应用中，建议使用定点数来存储数值，以保证结果的准确性。<br>6)    日期类型要根据实际需要选择能够满足应用的最小存储日期类型。尽量使用TIMESTAMP类型。优先使用ENUM或SET。<br>7)    避免使用NULL字段。<br>8)    不在数据库里存储图片。<br>9)    每个表必须有主键字段。最好选择自增列或全局ID做主键。自增型主键有利于插入性能的提高，并可以降低二级索引的空间。<br>10)    使用 bit 作为布尔字段，使用整数或者varcha是浪费。同时，这类字段应该以“Is”开头。<br>11)    Image、text、blob字段不应该定义在常用的数据表中，否则会影响性能。<br>12)    存储精确浮点数必须使用decimal，替代使用float和double.(float大于等于8位不准确，double大于16位不准确)。<br>13)    字段同类型，避免隐式转换。同数据类型的列值比较，应用传入与数据库定义保持一致。</li>
+<li>索引<br>1)    使用唯一索引。即值范围重复比例少的，建立索引字段。比如  createTime(录入时间)字段；值范围重复比率高的字段不需要建立索引比如isReturn(是否已退款)字段。<br>2)    主键字段不需要建立unique key，主键字段也不需要单独建索引。<br>3)    搜索的索引列，不一定是所要选择的列。 最适合索引的列是出现在WHERE子句中的列。<br>4)    使用短索引。如果对字符串列进行索引，应该指定一个前缀长度，可使得查询更快。<br>5)    利用最左前缀。多列索引可起几个索引的作用，可利用索引中最左边的列集来匹配行。<br>6)    建立索引的字段，要求不能有NULL值，否则会影响索引的效率。<br>7)    不要索引BLOB/TEXT等字段，不要索引大型字段(有很多字符)，这样作会让索引占用太多的存储空间。<br>8)    不要索引常用的小型表。<br>9)    不要过度索引。每个额外的索引都要占用额外的磁盘空间，并降低写操作的性能。<br>10)    使用整数字段做索引，否则会带来很大的性能问题 。<br>11)    发生隐式转换，会导致索引无效。可以使用通过执行计划查看是否使用到索引。常见的隐士转换：字段定义为字符，而传入条件为数字。在设计开发阶段就要避免数据库字段定义与应用程序参数定义出现不一致。</li>
+<li>存储过程<br>1)    不推荐使用存储过程、触发器等高级特性。<br>2)    不要在存储过程中进行大量的复杂运算，应尽量将这些运算操作分摊到应用服务器上执行。</li>
+<li>Sql编写<br>1)    SQL语句尽可能简单。将复杂SQL进行拆分分解，保证高并发或者放到应用中去实现。<br>2)    保持事务（连接）短小。避免使用大事务造成执行锁定时间，同时导致备库只读节点数据延迟。<br>3)    尽量减少返回列数，避免使用“select *”，而使用“select [required_column_list]”以获得更好的性能。<br>4)    选择合适的数据加载方式，避免使用insert…select…语句。从可移植性上考虑，建议将单条语句分离为select与insert两部分，虽然相当于增加了网络传输次数，但不再会出现锁阻塞情况。<br>5)    update,delete语句需要有对应索引。使用innodb存储引擎时，针对有大量并发修改（insert，update，delete）的表，评估SQL语句并建立相应索引，保证语句不会走全表扫描。<br>6)    利用索引优化order by操作，需要保证需要排序的列也在语句执行计划中要走的索引上。<br>7)    利用索引优化or条件，建立符合索引，保证对通过OR判断的列都同一条索引上。<br>8)    索引列上使用函数导致不使用索引，避免在SQL的where条件中对索引字段进行任何的函数操作，如mod等，使数据库可以选择一个最佳的索引来查询数据，减少资源消耗。<br>9)    like子句上使用前缀%导致不使用索引，在应用程序中，考虑增加对这些大表查询输入条件的限制，从性能角度考虑，尽量避免出现以%为前缀的数据查询。防止应用程序提交大量会引起大表全表扫描的查询。<br>10)    对索引字段进行运算导致不使用索引，禁止在WHERE条件后出现运算符，尽量运算部分能在应用端进行。需要在重新评估索引建立，避免在此字段上建立索引，改由查询条件中其他索引字段代替。<br>11)    提高分页查询效率，采用高效的 Limit 写法，避免分页查询给数据库带来性能影响。<br>12)    子查询在mysql的常见的5.0，5.1，5.5版本中都存在较大风险，使用不当则会造成严重的性能问题，建议将子查询改为关联的形式：迁移到mysql的时候，使用Mysql 5.6的版本，可以避免麻烦的子查询改写。<br>13)    拒绝3B（Big Transaction，Big SQL，Big Batch）情况的出现。</li>
+<li>其它<br>1)    数据库中的密码要加密，到应用中再解密。（其实就是散列存储、单向加密）。<br>2)    使用外键，非空等限制来保证数据的完整性，不要把所有的东西都扔给程序。<br>3)    缺乏数据库文档是致命的。你应该为你的数据库设计写文档，包括触发器、存储过程和其他脚本。<br>4)    对于经常使用的查询和大型数据表，要使用索引。数据分析工具可以帮助你决定如何建立索引。<br>5)    数据库服务器和网页服务器应该放在不同的机器上。这回提高安全性，并减轻CPU压力。<br>6)    不要使用mysql关键字作为表名和字段名。<br>7)    尽量字段定义为not null。<br>8)    建表时要考虑不同表之间的相同属性值的字段，列类型，类型长度，是否非空，是否默认值，需保持一致，否则无法正确使用索引进行关联对比。<br>9)    对于关键数据库，使用安全备份系统，例如集群，同步等等。<br>10)    报表统计业务影响前台应用访问，占用大量cup，采用只读节点的方案，将报表统计业务拆分到只读节点上。<br>11)    数据库的更新写入压力过大，update、insert、delete频繁操作导致日志急增，另外，大字段（varchar(8000)、text、blob、clob）的频繁更新也会导致日志急增。解决上述问题的途径：控制台支持一键清理日志、将大字段存放到OSS中存储。<br>1.1.5    MySQL常用数据类型<br>整数类型    字节    最小值    最大值<br>TINYINT    1    有符号-128    127<br>  无符号0     255<br>SMALLINT    2    有符号-32768    32767<br>  无符号0     65535<br>MEDIUMINT    3    有符号-8388608    8388607<br>  无符号0     1677215<br>INT、INTEGER    4    有符号-2147483648    2147483647<br>  无符号0     4294967295<br>BEGINT    8    有符号-9223372036854775808    9223372036854775807<br>  无符号0     18446744073709551615<br>表 9 8 整数类型</li>
+</ol>
+<p>浮点数类型    字节    最小值    最大值<br>FLOAT    4    ±1.17549351E-38    ±3.402823466E+38<br>DOUBLE    8    ±2.2250738585072014E-308    ±1.7976931348623157E+308<br>表 9 9 浮点数类型</p>
+<p>定点数类型    字节    描述<br>DEC(M,D)    M+2    最大取值范围与DOUBLE相同，给定DECIMAL的有效取值范围有M和D决定。<br>DECIMAL(M,D)<br>表 9 10 定点数类型</p>
+<p>位类型    字节    最小值    最大值<br>BIT(M)    1~8    BIT(1)    BIT(64)<br>表 9 11 位类型</p>
+<p>日期和时间<br>类型    字节    最小值    最大值<br>DATE    4    1000-01-01    9999/12/31<br>DATETIME    8    1000-01-01  00:00:00    9999/12/31 23:59<br>TIMESTAMP    4    19700101080001    2038的某个时刻<br>TIME    3    -838:59:59    838:59:59<br>YEAR    1    1901    2155<br>表 9 12 日期和时间类型</p>
+<p>数据类型    零值表示<br>DATETIME    0000-00-00  00:00:00<br>DATE    0000-00-00<br>TIMESTAMP    00000000000000<br>TIME    00:00:00<br>YEAR    0000<br>表 9 13 数据类型</p>
+<p>字符串类型    字节    描述及存储要求<br>CHAR(M)    M    M为0~255之间的数<br>VARCHAR(M)        M为0~65535之间的数，值的长度为+1个字节<br>TINYBLOB        允许长度0~255字节，值的长度为+1个字节<br>BLOB        允许长度0~65535字节，值的长度为+2个字节<br>MEDIUMBLOB        允许长度0~167772150字节，值的长度为+3个字节<br>LONGBLOB        允许长度0~4294967295字节，值的长度为+4个字节<br>TINYTEXT        允许长度0~255字节，值的长度为+2个字节<br>TEXT        允许长度0~65535字节，值的长度为+2个字节<br>MEDIUMTEXT        允许长度0~167772150字节，值的长度为+3个字节<br>LONGTEXT        允许长度0~4294967295字节，值的长度为+4个字节<br>VARBINARY(M)        允许长度0~M个字节的变长字节字符串，值的长度为+1个字节<br>BINARY(M)    M    允许长度0~M个字节的定长字节字符串<br>表 9 14 字符串类型</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/07/11/spring教程（一）/" class="pre-post btn btn-default" title='spring教程（一）'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">spring教程（一）</span>
+        </a>
+    
+    
+        <a href="/2018/07/11/xshell常用的命令/" class="next-post btn btn-default" title='xshell常用的命令'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">xshell常用的命令</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

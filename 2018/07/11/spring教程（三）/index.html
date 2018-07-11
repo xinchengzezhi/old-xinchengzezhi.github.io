@@ -1,0 +1,600 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>spring教程（三） | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/lujiao.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="spring教程（三）">
+            
+	            spring教程（三）
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/11</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1    spring day02回顾<br>    AOP ：切面编程<br>    切面：切入点 和 通知 结合<br>    spring aop 编程<br><a href="aop:config" target="_blank" rel="noopener">aop:config</a><br>方法1：<br>  &lt;aop:pointcut expression=”切入点表达式” id=””&gt;<br>  &lt;aop:advisor  advice-ref=”通知引用” pointcut-ref=”切入点的引用”&gt;</p>
+<p>方法2：<br>   &lt;aop:advisor  advice-ref=”通知引用” pointcut=”切入点表达式”&gt;</p>
+<p>    AspectJ xml<br><a href="aop:config" target="_blank" rel="noopener">aop:config</a><br>  &lt;aop:aspect ref=”切面类”&gt;<br>     <a href="aop:pointcut" target="_blank" rel="noopener">aop:pointcut</a><br>     <a href="aop:before" target="_blank" rel="noopener">aop:before</a>  前置<br>     &lt;aop:afterReturning  returning=”第二个参数名称”&gt; 后置<br>     <a href="aop:around" target="_blank" rel="noopener">aop:around</a> 环绕<br>     &lt;aop:afterThrowing throwing=”第二。。。”&gt; 抛出异常<br>     <a href="aop:after" target="_blank" rel="noopener">aop:after</a> 最终</p>
+<p>    AspectJ annotation<br>    @Aspect<br>    @Pointcut(“表达式”)  private void xxx(){}<br>    @Before @…</p>
+<p>    切入点表达式<br>    &lt;aop:pointcut expression=”execution(<em> com.itheima.crm.</em>.service..<em>.</em>(..))” id=””&gt;</p>
+<p>2    事务管理<br>2.1    回顾事务<br>    事务：一组业务操作ABCD，要么全部成功，要么全部不成功。<br>    特性：ACID<br>    原子性：整体<br>    一致性：完成<br>    隔离性：并发<br>    持久性：结果<br>    隔离问题：<br>    脏读：一个事务读到另一个事务没有提交的数据<br>    不可重复读：一个事务读到另一个事务已提交的数据（update）<br>    虚读(幻读)：一个事务读到另一个事务已提交的数据（insert）<br>    隔离级别：<br>    read uncommitted：读未提交。存在3个问题<br>    read committed：读已提交。解决脏读，存在2个问题<br>    repeatable read：可重复读。解决：脏读、不可重复读，存在1个问题。<br>    serializable ：串行化。都解决，单事务。</p>
+<p>    mysql 事务操作–简单<br>ABCD 一个事务<br>Connection conn = null;<br>try{<br>  //1 获得连接<br>  conn = …;<br>  //2 开启事务<br>  conn.setAutoCommit(false);<br>  A<br>  B<br>  C<br>  D<br>  //3 提交事务<br>  conn.commit();<br>} catche(){<br>  //4 回滚事务<br>  conn.rollback();<br>}</p>
+<p>    mysql 事务操作–Savepoint<br>需求：AB（必须），CD（可选）<br>Connection conn = null;<br>Savepoint savepoint = null;  //保存点，记录操作的当前位置，之后可以回滚到指定的位置。（可以回滚一部分）<br>try{<br>  //1 获得连接<br>  conn = …;<br>  //2 开启事务<br>  conn.setAutoCommit(false);<br>  A<br>  B<br>  savepoint = conn.setSavepoint();<br>  C<br>  D<br>  //3 提交事务<br>  conn.commit();<br>} catche(){<br>  if(savepoint != null){   //CD异常<br>     // 回滚到CD之前<br>     conn.rollback(savepoint);<br>     // 提交AB<br>     conn.commit();<br>  } else{   //AB异常<br>     // 回滚AB<br>     conn.rollback();<br>  }<br>}</p>
+<p>2.2    事务管理介绍<br>2.2.1    导入jar包<br>transaction  –&gt;  tx</p>
+<p>2.2.2    三个顶级接口</p>
+<p>    PlatformTransactionManager  平台事务管理器，spring要管理事务，必须使用事务管理器<br>    进行事务配置时，必须配置事务管理器。<br>    TransactionDefinition：事务详情（事务定义、事务属性），spring用于确定事务具体详情，<br>    例如：隔离级别、是否只读、超时时间 等<br>    进行事务配置时，必须配置详情。spring将配置项封装到该对象实例。<br>    TransactionStatus：事务状态，spring用于记录当前事务运行状态。例如：是否有保存点，事务是否完成。<br>    spring底层根据状态进行相应操作。</p>
+<p>2.2.3    PlatformTransactionManager  事务管理器<br>    导入jar包：需要时平台事务管理器的实现类</p>
+<p>    常见的事务管理器<br>    DataSourceTransactionManager  ，jdbc开发时事务管理器，采用JdbcTemplate<br>    HibernateTransactionManager，hibernate开发时事务管理器，整合hibernate</p>
+<p>    api详解<br>TransactionStatus getTransaction(TransactionDefinition definition) ，事务管理器 通过“事务详情”，获得“事务状态”，从而管理事务。<br>void commit(TransactionStatus status)  根据状态提交<br>void rollback(TransactionStatus status) 根据状态回滚</p>
+<p>2.2.4    TransactionStatus</p>
+<p>2.2.5    TransactionDefinition</p>
+<p>    传播行为：在两个业务之间如何共享事务。</p>
+<p>PROPAGATION_REQUIRED , required , 必须  【默认值】<br>    支持当前事务，A如果有事务，B将使用该事务。<br>    如果A没有事务，B将创建一个新的事务。<br>PROPAGATION_SUPPORTS ，supports ，支持<br>    支持当前事务，A如果有事务，B将使用该事务。<br>    如果A没有事务，B将以非事务执行。<br>PROPAGATION_MANDATORY，mandatory ，强制<br>    支持当前事务，A如果有事务，B将使用该事务。<br>    如果A没有事务，B将抛异常。<br>PROPAGATION_REQUIRES_NEW ， requires_new ，必须新的<br>    如果A有事务，将A的事务挂起，B创建一个新的事务<br>    如果A没有事务，B创建一个新的事务<br>PROPAGATION_NOT_SUPPORTED ，not_supported ,不支持<br>    如果A有事务，将A的事务挂起，B将以非事务执行<br>    如果A没有事务，B将以非事务执行<br>PROPAGATION_NEVER ，never，从不<br>    如果A有事务，B将抛异常<br>    如果A没有事务，B将以非事务执行<br>PROPAGATION_NESTED ，nested ，嵌套<br>    A和B底层采用保存点机制，形成嵌套事务。</p>
+<p>掌握：PROPAGATION_REQUIRED、PROPAGATION_REQUIRES_NEW、PROPAGATION_NESTED </p>
+<p>2.3    案例：转账<br>2.3.1    搭建环境<br>2.3.1.1    创建表<br>create database ee19_spring_day03;<br>use ee19_spring_day03;<br>create table account(<br>  id int primary key auto_increment,<br>  username varchar(50),<br>  money int<br>);<br>insert into account(username,money) values(‘jack’,’10000’);<br>insert into account(username,money) values(‘rose’,’10000’);</p>
+<p>2.3.1.2    导入jar包<br>    核心：4+1<br>    aop ： 4 (aop联盟、spring aop、aspectj规范、spring aspect)<br>    数据库：2  （jdbc/tx）<br>    驱动：mysql<br>    连接池：c3p0</p>
+<p>2.3.1.3    dao层<br>public class AccountDaoImpl extends JdbcDaoSupport implements AccountDao {</p>
+<pre><code>@Override
+public void out(String outer, Integer money) {
+    this.getJdbcTemplate().update(&quot;update account set money = money - ? where username = ?&quot;, money,outer);
+}
+
+@Override
+public void in(String inner, Integer money) {
+    this.getJdbcTemplate().update(&quot;update account set money = money + ? where username = ?&quot;, money,inner);
+}
+</code></pre><p>}</p>
+<p>2.3.1.4    service层<br>public class AccountServiceImpl implements AccountService {</p>
+<pre><code>private AccountDao accountDao;
+public void setAccountDao(AccountDao accountDao) {
+    this.accountDao = accountDao;
+}
+@Override
+public void transfer(String outer, String inner, Integer money) {
+    accountDao.out(outer, money);
+    //断电
+</code></pre><p>//        int i = 1/0;<br>        accountDao.in(inner, money);<br>    }</p>
+<p>}</p>
+<p>2.3.1.5    spring配置<br>    <!-- 1 datasource --><br>    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"><br>        <property name="driverClass" value="com.mysql.jdbc.Driver"></property><br>        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/ee19_spring_day03"></property><br>        <property name="user" value="root"></property><br>        <property name="password" value="1234"></property><br>    </bean></p>
+<pre><code>&lt;!-- 2 dao  --&gt;
+&lt;bean id=&quot;accountDao&quot; class=&quot;com.itheima.dao.impl.AccountDaoImpl&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+&lt;!-- 3 service --&gt;
+&lt;bean id=&quot;accountService&quot; class=&quot;com.itheima.service.impl.AccountServiceImpl&quot;&gt;
+    &lt;property name=&quot;accountDao&quot; ref=&quot;accountDao&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>2.3.1.6    测试<br>    @Test<br>    public void demo01(){<br>        String xmlPath = “applicationContext.xml”;<br>        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);<br>        AccountService accountService =  (AccountService) applicationContext.getBean(“accountService”);<br>        accountService.transfer(“jack”, “rose”, 1000);<br>    }</p>
+<p>2.3.2    手动管理事务（了解）<br>    spring底层使用 TransactionTemplate 事务模板进行操作。<br>    操作<br>1.service 需要获得 TransactionTemplate<br>2.spring 配置模板，并注入给service<br>3.模板需要注入事务管理器<br>4.配置事务管理器：DataSourceTransactionManager ，需要注入DataSource</p>
+<p>2.3.2.1    修改service<br>    //需要spring注入模板<br>    private TransactionTemplate transactionTemplate;<br>    public void setTransactionTemplate(TransactionTemplate transactionTemplate) {<br>        this.transactionTemplate = transactionTemplate;<br>    }<br>    @Override<br>    public void transfer(final String outer,final String inner,final Integer money) {<br>        transactionTemplate.execute(new TransactionCallbackWithoutResult() {</p>
+<pre><code>@Override
+protected void doInTransactionWithoutResult(TransactionStatus arg0) {
+    accountDao.out(outer, money);
+    //断电
+</code></pre><p>//                int i = 1/0;<br>                accountDao.in(inner, money);<br>            }<br>        });</p>
+<pre><code>}
+</code></pre><p>2.3.2.2    修改spring配置<br><!-- 3 service --><br>    <bean id="accountService" class="com.itheima.service.impl.AccountServiceImpl"><br>        <property name="accountDao" ref="accountDao"></property><br>        <property name="transactionTemplate" ref="transactionTemplate"></property><br>    </bean></p>
+<pre><code>&lt;!-- 4 创建模板 --&gt;
+&lt;bean id=&quot;transactionTemplate&quot; class=&quot;org.springframework.transaction.support.TransactionTemplate&quot;&gt;
+    &lt;property name=&quot;transactionManager&quot; ref=&quot;txManager&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;!-- 5 配置事务管理器 ,管理器需要事务，事务从Connection获得，连接从连接池DataSource获得 --&gt;
+&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>2.3.3    工厂bean 生成代理：半自动<br>    spring提供 管理事务的代理工厂bean TransactionProxyFactoryBean<br>1.getBean() 获得代理对象<br>2.spring 配置一个代理</p>
+<p>2.3.3.1    spring配置<br><!-- 4 service 代理对象 
+        4.1 proxyInterfaces 接口 
+        4.2 target 目标类
+        4.3 transactionManager 事务管理器
+        4.4 transactionAttributes 事务属性（事务详情）
+            prop.key ：确定哪些方法使用当前事务配置
+            prop.text:用于配置事务详情
+                格式：PROPAGATION,ISOLATION,readOnly,-Exception,+Exception
+                    传播行为        隔离级别    是否只读        异常回滚        异常提交
+                例如：
+                    <prop key="transfer">PROPAGATION_REQUIRED,ISOLATION_DEFAULT</prop> 默认传播行为，和隔离级别
+                    <prop key="transfer">PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly</prop> 只读
+                    <prop key="transfer">PROPAGATION_REQUIRED,ISOLATION_DEFAULT,+java.lang.ArithmeticException</prop>  有异常扔提交
+    --><br>    <bean id="proxyAccountService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"><br>        <property name="proxyInterfaces" value="com.itheima.service.AccountService"></property><br>        <property name="target" ref="accountService"></property><br>        <property name="transactionManager" ref="txManager"></property><br>        <property name="transactionAttributes"><br>            <props><br>                <prop key="transfer">PROPAGATION_REQUIRED,ISOLATION_DEFAULT</prop><br>            </props><br>        </property><br>    </bean></p>
+<pre><code>&lt;!-- 5 事务管理器 --&gt;
+&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>2.3.3.2    测试</p>
+<p>2.3.4    AOP 配置基于xml【掌握】<br>    在spring xml 配置aop 自动生成代理，进行事务的管理<br>1.配置管理器<br>2.配置事务详情<br>3.配置aop</p>
+<!-- 4 事务管理 -->
+<pre><code>&lt;!-- 4.1 事务管理器 --&gt;
+&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+&lt;!-- 4.2 事务详情（事务通知）  ， 在aop筛选基础上，对ABC三个确定使用什么样的事务。例如：AC读写、B只读 等
+    &lt;tx:attributes&gt; 用于配置事务详情（属性属性）
+        &lt;tx:method name=&quot;&quot;/&gt; 详情具体配置
+            propagation 传播行为 ， REQUIRED：必须；REQUIRES_NEW:必须是新的
+            isolation 隔离级别
+--&gt;
+&lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;txManager&quot;&gt;
+    &lt;tx:attributes&gt;
+        &lt;tx:method name=&quot;transfer&quot; propagation=&quot;REQUIRED&quot; isolation=&quot;DEFAULT&quot;/&gt;
+    &lt;/tx:attributes&gt;
+&lt;/tx:advice&gt;
+&lt;!-- 4.3 AOP编程，目标类有ABCD（4个连接点），切入点表达式 确定增强的连接器，从而获得切入点：ABC --&gt;
+&lt;aop:config&gt;
+    &lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut=&quot;execution(* com.itheima.service..*.*(..))&quot;/&gt;
+&lt;/aop:config&gt;
+</code></pre><p>2.3.5    AOP配置基于注解【掌握】<br>    1.配置事务管理器，将并事务管理器交予spring<br>    2.在目标类或目标方法添加注解即可 @Transactional</p>
+<p>2.3.5.1    spring配置<br><!-- 4 事务管理 --><br>    <!-- 4.1 事务管理器 --><br>    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"><br>        <property name="dataSource" ref="dataSource"></property><br>    </bean><br>    &lt;!– 4.2 将管理器交予spring </p>
+<pre><code>    * transaction-manager 配置事务管理器
+    * proxy-target-class
+        true ： 底层强制使用cglib 代理
+--&gt;
+&lt;tx:annotation-driven transaction-manager=&quot;txManager&quot;/&gt;
+</code></pre><p>2.3.5.2    service 层<br>@Transactional<br>public class AccountServiceImpl implements AccountService {</p>
+<p>2.3.5.3    事务详情配置</p>
+<p>@Transactional(propagation=Propagation.REQUIRED , isolation = Isolation.DEFAULT)<br>public class AccountServiceImpl implements AccountService {</p>
+<p>3    整合Junit<br>    导入jar包<br>    基本 ：4+1<br>    测试：spring-test…jar</p>
+<p>1.让Junit通知spring加载配置文件<br>2.让spring容器自动进行注入</p>
+<p>    修改测试类<br>@RunWith(SpringJUnit4ClassRunner.class)<br>@ContextConfiguration(locations=”classpath:applicationContext.xml”)<br>public class TestApp {</p>
+<pre><code>@Autowired  //与junit整合，不需要在spring xml配置扫描
+private AccountService accountService;
+
+@Test
+public void demo01(){
+</code></pre><p>//        String xmlPath = “applicationContext.xml”;<br>//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);<br>//        AccountService accountService =  (AccountService) applicationContext.getBean(“accountService”);<br>        accountService.transfer(“jack”, “rose”, 1000);<br>    }</p>
+<p>}</p>
+<p>4    整合web<br>0.导入jar包<br>    spring-web.xml</p>
+<p>1.tomcat启动加载配置文件<br>    servlet –&gt; init(ServletConfig) –&gt; <load-on-startup>2<br>    filter –&gt; init(FilterConfig)  –&gt; web.xml注册过滤器自动调用初始化<br>    listener –&gt; ServletContextListener –&gt; servletContext对象监听【】<br>    spring提供监听器 ContextLoaderListener  –&gt; web.xml  <listener><listener-class>….<br>        如果只配置监听器，默认加载xml位置：/WEB-INF/applicationContext.xml</listener-class></listener></load-on-startup></p>
+<p>2.确定配置文件位置，通过系统初始化参数<br>    ServletContext 初始化参数 web.xml<br>        <context-param><br>            <param-name>contextConfigLocation<br>            <param-value>classpath:applicationContext.xml</param-value></param-name></context-param></p>
+  <!-- 确定配置文件位置 -->
+<p>  <context-param><br>      <param-name>contextConfigLocation</param-name><br>      <param-value>classpath:applicationContext.xml</param-value><br>  </context-param></p>
+  <!-- 配置spring 监听器，加载xml配置文件 -->
+  <listener><br>      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class><br>  </listener>
+
+<p>3.从servletContext作用域 获得spring容器 （了解）<br>    // 从application作用域（ServletContext）获得spring容器<br>        //方式1： 手动从作用域获取<br>        ApplicationContext applicationContext =<br>                (ApplicationContext) this.getServletContext().getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);<br>        //方式2：通过工具获取<br>        ApplicationContext apppApplicationContext2 =<br>                WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());</p>
+<p>5    SSH整合<br>5.1    jar整合<br>struts：2.3.15.3<br>hibernate : 3.6.10<br>spring: 3.2.0</p>
+<p>5.1.1    struts<br>struts-2.3.15.3\apps\struts2-blank\WEB-INF\lib</p>
+<p>模板技术  ，一般用于页面静态化<br>freemarker：扩展名：<em>.ftl<br>velocity ：扩展名  </em>.vm<br>5.1.2    spring<br>    基础：4+1 ， beans、core、context、expression ， commons-logging (struts已经导入)<br>    AOP：aop联盟、spring aop 、aspect规范、spring aspect<br>    db：jdbc、tx<br>    测试：test<br>    web开发：spring web</p>
+<p>    驱动：mysql<br>    连接池：c3p0</p>
+<p>    整合hibernate：spring orm </p>
+<p>5.1.3    hibernate<br>%h%\hibernate3.jar            核心<br>%h%\lib\required            必须</p>
+<p>%h%\lib\jpa                jpa规范 （java persistent api 持久api），hibernate注解开发 @Entity @Id 等</p>
+<p>    整合log4j<br>    导入 log4j…jar (struts已经导入)<br>    整合（过渡）：slf4j-log4j12-1.7.5.jar</p>
+<p>    二级缓存<br>    核心：ehcache-1.5.0.jar<br>    依赖：<br>        backport-util-concurrent-2.1.jar<br>        commons-logging  (存在)</p>
+<p>5.1.4    整合包<br>    spring整合hibernate： spring orm<br>    struts 整合spring：struts2-spring-plugin-2.3.15.3.jar</p>
+<p>删除重复jar包</p>
+<p>5.2    spring整合hibernate：有hibernate.cfg.xml<br>5.2.1    创建表<br>create table t_user(<br>  id int primary key auto_increment,<br>  username varchar(50),<br>  password varchar(32),<br>  age int<br>);</p>
+<p>5.2.2    PO 类</p>
+<p>    javabean<br>public class User {<br>    private Integer id;<br>    private String username;<br>    private String password;<br>    private Integer age;</p>
+<p>    映射文件<br>&lt;!DOCTYPE hibernate-mapping PUBLIC<br>    “-//Hibernate/Hibernate Mapping DTD 3.0//EN”<br>    “<a href="http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd&quot;&gt;" target="_blank" rel="noopener">http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd&quot;&gt;</a></p>
+<p><hibernate-mapping><br>    <class name="com.itheima.domain.User" table="t_user"><br>        <id name="id"><br>            <generator class="native"></generator><br>        </id><br>        <property name="username"></property><br>        <property name="password"></property><br>        <property name="age"></property><br>    </class></hibernate-mapping></p>
+<p></p>
+<p>5.2.3    dao层<br>    spring提供 HibernateTemplate 用于操作PO对象，类似Hibernate Session对象。</p>
+<p>public class UserDaoImpl implements UserDao {</p>
+<pre><code>//需要spring注入模板
+private HibernateTemplate hibernateTemplate;
+public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+    this.hibernateTemplate = hibernateTemplate;
+}
+
+@Override
+public void save(User user) {
+    this.hibernateTemplate.save(user);
+}
+</code></pre><p>}</p>
+<p>5.2.4    service层</p>
+<p>public class UserServiceImpl implements UserService {</p>
+<pre><code>private UserDao userDao;
+public void setUserDao(UserDao userDao) {
+    this.userDao = userDao;
+}
+@Override
+public void register(User user) {
+    userDao.save(user);
+}
+</code></pre><p>}</p>
+<p>5.2.5    hibernate.cfg.xml</p>
+<p><session-factory><br>        <!-- 1基本4项 --><br>        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property><br>        <property name="hibernate.connection.url">jdbc:mysql:///ee19_spring_day03</property><br>        <property name="hibernate.connection.username">root</property><br>        <property name="hibernate.connection.password">1234</property></session-factory></p>
+<pre><code>    &lt;!-- 2 配置方言 --&gt;
+    &lt;property name=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQL5Dialect&lt;/property&gt;
+
+    &lt;!-- 3 sql语句 --&gt;
+    &lt;property name=&quot;hibernate.show_sql&quot;&gt;true&lt;/property&gt;
+    &lt;property name=&quot;hibernate.format_sql&quot;&gt;true&lt;/property&gt;
+
+    &lt;!-- 4 自动生成表(一般没用) --&gt;
+    &lt;property name=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/property&gt;
+
+    &lt;!-- 5本地线程绑定 --&gt;
+    &lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/property&gt;
+
+    &lt;!-- 导入映射文件 --&gt;
+    &lt;mapping resource=&quot;com/itheima/domain/User.hbm.xml&quot;/&gt;
+
+&lt;/session-factory&gt;
+</code></pre><p>5.2.6    applicationContext.xml<br>5.2.6.1    添加命名空间<br>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context" xsi:schemalocation="http://www.springframework.org/schema/beans 
+                              http://www.springframework.org/schema/beans/spring-beans.xsd
+                              http://www.springframework.org/schema/tx 
+                              http://www.springframework.org/schema/tx/spring-tx.xsd
+                              http://www.springframework.org/schema/aop 
+                              http://www.springframework.org/schema/aop/spring-aop.xsd
+                              http://www.springframework.org/schema/context 
+                              http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<p>5.2.6.2    加载hibernate配置文件<br>&lt;!– 1 加载hibenrate.cfg.xml 获得SessionFactory </p>
+<pre><code>    * configLocation确定配置文件位置
+--&gt;
+&lt;bean id=&quot;sessionFactory&quot; class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;
+    &lt;property name=&quot;configLocation&quot; value=&quot;classpath:hibernate.cfg.xml&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;!-- 2创建模板 
+    * 底层使用session，session 有sessionFactory获得
+--&gt;
+&lt;bean id=&quot;hibernateTemplate&quot; class=&quot;org.springframework.orm.hibernate3.HibernateTemplate&quot;&gt;
+    &lt;property name=&quot;sessionFactory&quot; ref=&quot;sessionFactory&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>5.2.6.3    dao和service<br><!-- 3 dao --><br>    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"><br>        <property name="hibernateTemplate" ref="hibernateTemplate"></property><br>    </bean></p>
+<pre><code>&lt;!-- 4 service --&gt;
+&lt;bean id=&quot;userService&quot; class=&quot;com.itheima.service.impl.UserServiceImpl&quot;&gt;
+    &lt;property name=&quot;userDao&quot; ref=&quot;userDao&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>5.2.6.4    事务管理<br><!-- 5 事务管理 --><br>    <!-- 5.1 事务管理器 ：HibernateTransactionManager --><br>    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"><br>        <property name="sessionFactory" ref="sessionFactory"></property><br>    </bean><br>    <!-- 5.2 事务详情 ，给ABC进行具体事务设置 --><br>    &lt;tx:advice id=”txAdvice” transaction-manager=”txManager”&gt;<br>        <a href="tx:attributes" target="_blank" rel="noopener">tx:attributes</a><br>            &lt;tx:method name=”register”/&gt;<br>        &lt;/tx:attributes&gt;<br>    &lt;/tx:advice&gt;<br>    <!-- 5.3 AOP编程，ABCD 筛选 ＡＢＣ  --><br>    <a href="aop:config" target="_blank" rel="noopener">aop:config</a><br>        &lt;aop:advisor advice-ref=”txAdvice” pointcut=”execution(<em> com.itheima.service..</em>.*(..))”/&gt;<br>    &lt;/aop:config&gt;</p>
+<p>5.2.7    测试<br>@RunWith(SpringJUnit4ClassRunner.class)<br>@ContextConfiguration(locations=”classpath:applicationContext.xml”)<br>public class TestApp {</p>
+<pre><code>@Autowired
+private UserService userService;
+
+@Test
+public void demo01(){
+    User user = new User();
+    user.setUsername(&quot;jack&quot;);
+    user.setPassword(&quot;1234&quot;);
+    user.setAge(18);
+
+    userService.register(user);
+}
+</code></pre><p>}</p>
+<p>5.3    spring整合hibernate：没有hibernate.cfg.xml 【】<br>    删除hibernate.cfg.xml文件，但需要保存文件内容，将其配置spring中<br>    修改dao层，继承HibernateDaoSupport</p>
+<p>5.3.1    修改spring，配置SessionFactory<br><!-- 1.1加载properties文件 --><br>    <!-- 1.2 配置数据源 --><br>    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"><br>        <property name="driverClass" value="com.mysql.jdbc.Driver"></property><br>        <property name="jdbcUrl" value="jdbc:mysql:///ee19_spring_day03"></property><br>        <property name="user" value="root"></property><br>        <property name="password" value="1234"></property><br>    </bean></p>
+<pre><code>&lt;!-- 1.3配置 LocalSessionFactoryBean，获得SessionFactory 
+    * configLocation确定配置文件位置
+        &lt;property name=&quot;configLocation&quot; value=&quot;classpath:hibernate.cfg.xml&quot;&gt;&lt;/property&gt;
+    1)dataSource 数据源
+    2)hibernateProperties hibernate其他配置项
+    3) 导入映射文件
+        mappingLocations ，确定映射文件位置，需要“classpath:” ,支持通配符 【】
+            &lt;property name=&quot;mappingLocations&quot; value=&quot;classpath:com/itheima/domain/User.hbm.xml&quot;&gt;&lt;/property&gt;
+            &lt;property name=&quot;mappingLocations&quot; value=&quot;classpath:com/itheima/domain/*.hbm.xml&quot;&gt;&lt;/property&gt;
+        mappingResources ，加载执行映射文件，从src下开始 。不支持通配符*
+            &lt;property name=&quot;mappingResources&quot; value=&quot;com/itheima/domain/User.hbm.xml&quot;&gt;&lt;/property&gt;
+        mappingDirectoryLocations ，加载指定目录下的，所有配置文件
+            &lt;property name=&quot;mappingDirectoryLocations&quot; value=&quot;classpath:com/itheima/domain/&quot;&gt;&lt;/property&gt;
+        mappingJarLocations ， 从jar包中获得映射文件
+--&gt;
+&lt;bean id=&quot;sessionFactory&quot; class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;hibernateProperties&quot;&gt;
+        &lt;props&gt;
+            &lt;prop key=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQL5Dialect&lt;/prop&gt;
+            &lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;
+            &lt;prop key=&quot;hibernate.format_sql&quot;&gt;true&lt;/prop&gt;
+            &lt;prop key=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/prop&gt;
+            &lt;prop key=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/prop&gt;
+        &lt;/props&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;mappingLocations&quot; value=&quot;classpath:com/itheima/domain/*.hbm.xml&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>5.3.2    修改dao，使用HibernateDaoSupport<br>    继承HibernateDaoSupport<br>// 底层需要SessionFactory，自动创建HibernateTemplate模板<br>public class UserDaoImpl extends HibernateDaoSupport implements UserDao {</p>
+<pre><code>@Override
+public void save(User user) {
+    this.getHibernateTemplate().save(user);
+}
+</code></pre><p>}<br>    spring 删除模板，给dao注入SessionFactory<br>    <!-- 3 dao --><br>    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"><br>        <property name="sessionFactory" ref="sessionFactory"></property><br>    </bean></p>
+<p>5.4    struts整合spring：spring创建action<br>1.编写action类，并将其配置给spring ，spring可以注入service<br>2.编写struts.xml<br>3.表单jsp页面<br>4.web.xml 配置<br>    1.确定配置文件contextConfigLocation<br>    2.配置监听器 ContextLoaderListener<br>    3.配置前端控制器 StrutsPrepareAndExecuteFitler</p>
+<p>5.4.1    action类<br>    通用<br>public class UserAction extends ActionSupport implements ModelDriven<user> {</user></p>
+<pre><code>//1 封装数据
+private User user = new User();
+
+@Override
+public User getModel() {
+    return user;
+}
+
+//2 service
+private UserService userService;
+public void setUserService(UserService userService) {
+    this.userService = userService;
+}
+</code></pre><p>    功能<br>/**</p>
+<pre><code> * 注册
+ * @return
+ */
+public String register(){
+    userService.register(user);
+    return &quot;success&quot;;
+}
+</code></pre><p>5.4.2    spring配置<br><!-- 6 配置action --><br>    <bean id="userAction" class="com.itheima.web.action.UserAction" scope="prototype"><br>        <property name="userService" ref="userService"></property><br>    </bean></p>
+<p>5.4.3    struts配置</p>
+<struts><br>    <!-- 开发模式 --><br>    <constant name="struts.devMode" value="true"><br><br>    <package name="default" namespace="/" extends="struts-default"><br>        <!-- 底层自动从spring容器中通过名称获得内容， getBean("userAction") --><br>        <action name="userAction_*" class="userAction" method="{1}"><br>            <result name="success">/messag.jsp</result><br>        </action><br>    </package><br></constant></struts>
+
+<p>5.4.4    jsp表单</p>
+<form action="${pageContext.request.contextPath}/userAction_register" method="post"><br>        用户名：<input type="text" name="username"> <br><br>        密码：<input type="password" name="password"> <br><br>        年龄：<input type="text" name="age"> <br><br>        <input type="submit"><br>    </form>
+
+<p>5.4.5    配置web.xml<br><!-- 1 确定spring xml位置 --><br>  <context-param><br>      <param-name>contextConfigLocation</param-name><br>      <param-value>classpath:applicationContext.xml</param-value><br>  </context-param><br>  <!-- 2 spring监听器 --><br>  <listener><br>      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class><br>  </listener><br>  <!-- 3 struts 前端控制器 --><br>  <filter><br>      <filter-name>struts2</filter-name><br>      <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class><br>  </filter><br>  <filter-mapping><br>      <filter-name>struts2</filter-name><br>      <url-pattern>/*</url-pattern><br>  </filter-mapping></p>
+<p>5.5    struts整合spring：struts创建action 【】<br>    删除spring action配置<br>    struts <action class="全限定类名"></action></p>
+<package name="default" namespace="/" extends="struts-default"><br>        <!-- 底层自动从spring容器中通过名称获得内容， getBean("userAction") --><br>        <action name="userAction_*" class="com.itheima.web.action.UserAction" method="{1}"><br>            <result name="success">/messag.jsp</result><br>        </action><br>    </package>
+
+<p>    要求：Action类中，必须提供service名称与 spring配置文件一致。（如果名称一样，将自动注入）</p>
+<p>分析：</p>
+<ol>
+<li><p>struts 配置文件<br> default.properties  ,常量配置文件<br> struts-default.xml ，默认核心配置文件<br> struts-plugins.xml ，插件配置文件<br> struts.xml，自定义核心配置文件<br> 常量的使用，后面配置项，将覆盖前面的。<br>2.default.properties  ，此配置文件中确定 按照【名称】自动注入<br> /org/apache/struts2/default.properties</p>
+</li>
+<li><p>struts-plugins.xml ,struts整合spring</p>
+<pre><code>&lt;constant name=&quot;struts.objectFactory&quot; value=&quot;spring&quot; /&gt;
+</code></pre><p> struts的action将有spring创建</p>
+</li>
+</ol>
+<p>总结，之后action有spring创建，并按照名称自动注入</p>
+<p>6    要求</p>
+</beans>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/07/11/spring教程（四）/" class="pre-post btn btn-default" title='spring教程（四）'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">spring教程（四）</span>
+        </a>
+    
+    
+        <a href="/2018/07/11/spring教程（二）/" class="next-post btn btn-default" title='spring教程（二）'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">spring教程（二）</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

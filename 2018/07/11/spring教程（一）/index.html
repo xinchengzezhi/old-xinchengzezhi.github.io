@@ -1,0 +1,607 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>spring教程（一） | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/lujiao.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="spring教程（一）">
+            
+	            spring教程（一）
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/11</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>struts：web层，比较简单（ValueStack值栈，拦截器）<br>hibernate：dao层，知识点杂<br>spring：service层，重要，讲多少用多少  –&gt; 【了解】</p>
+<p>spring day01：基础（IoC控制反转、DI依赖注入）、整合Junit、整合web<br>spring day02：AOP切面编程、JdbcTemplate<br>spring day03：事务管理、SSH整合</p>
+<p>1    spring框架概述<br>1.1    什么是spring<br>    Spring是一个开源框架，Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson 在其著作Expert One-On-One J2EE Development and Design中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。框架的主要优势之一就是其分层架构，分层架构允许使用者选择使用哪一个组件，同时为 J2EE 应用程序开发提供集成的框架。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。Spring的核心是控制反转（IoC）和面向切面（AOP）。简单来说，Spring是一个分层的JavaSE/EE full-stack(一站式) 轻量级开源框架。<br>    轻量级：与EJB对比，依赖资源少，销毁的资源少。<br>    分层： 一站式，每一个层都提供的解决方案<br>    web层：struts，spring-MVC<br>    service层：spring<br>    dao层：hibernate，mybatis ， jdbcTemplate  –&gt; spring-data</p>
+<p>1.2    spring由来<br>    Expert One-to-One J2EE Design and Development<br>    Expert One-to-One J2EE Development without EJB</p>
+<p>1.3    spring核心<br>    Spring的核心是控制反转（IoC）和面向切面（AOP）</p>
+<p>1.4    spring优点<br>    方便解耦，简化开发  （高内聚低耦合）<br>•    Spring就是一个大工厂（容器），可以将所有对象创建和依赖关系维护，交给Spring管理<br>•    spring工厂是用于生成bean<br>    AOP编程的支持<br>•    Spring提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能<br>    声明式事务的支持<br>•    只需要通过配置就可以完成对事务的管理，而无需手动编程<br>    方便程序的测试<br>•    Spring对Junit4支持，可以通过注解方便的测试Spring程序<br>    方便集成各种优秀框架<br>•    Spring不排斥各种优秀的开源框架，其内部提供了对各种优秀框架（如：Struts、Hibernate、MyBatis、Quartz等）的直接支持<br>    降低JavaEE API的使用难度<br>•    Spring 对JavaEE开发中非常难用的一些API（JDBC、JavaMail、远程调用等），都提供了封装，使这些API应用难度大大降低</p>
+<p>1.5    spring体系结构</p>
+<p>核心容器：beans、core、context、expression</p>
+<p>2    入门案例：IoC【掌握】<br>IoC Inverse of Control 反转控制的概念，就是将原本在程序中手动创建HelloService对象的控制权，交由Spring框架管理，简单说，就是创建HelloService对象控制权被反转到了Spring框架 </p>
+<p>2.1    导入jar包<br>    4 + 1  ： 4个核心（beans、core、context、expression） + 1个依赖（commons-loggins…jar）</p>
+<p>2.2    目标类<br>    提供UserService接口和实现类<br>    获得UserService实现类的实例<br>    之前开发中，直接new一个对象即可。<br>    学习spring之后，将由Spring创建对象实例–&gt; IoC 控制反转（Inverse of  Control）<br>        之后需要实例对象时，从spring工厂（容器）中获得，需要将实现类的全限定名称配置到xml文件中<br>public interface UserService {</p>
+<pre><code>public void addUser();
+</code></pre><p>}</p>
+<p>public class UserServiceImpl implements UserService {</p>
+<pre><code>@Override
+public void addUser() {
+    System.out.println(&quot;a_ico add user&quot;);
+}
+</code></pre><p>}</p>
+<p>2.3    配置文件<br>    位置：任意，开发中一般在classpath下（src）<br>    名称：任意，开发中常用applicationContext.xml<br>    内容：添加schema约束<br>    约束文件位置：spring-framework-3.2.0.RELEASE\docs\spring-framework-reference\html\ xsd-config.html<br>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+                              http://www.springframework.org/schema/beans/spring-beans.xsd"><br>    <!-- 配置service 
+        <bean> 配置需要创建的对象
+            id ：用于之后从spring容器获得实例时使用的
+            class ：需要创建实例的全限定类名
+    --><br>    <bean id="userServiceId" class="com.itheima.a_ioc.UserServiceImpl"></bean><br></beans>
+
+
+<p>2.4    测试<br>@Test<br>    public void demo02(){<br>        //从spring容器获得<br>        //1 获得容器<br>        String xmlPath = “com/itheima/a_ioc/beans.xml”;<br>        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);<br>        //2获得内容 –不需要自己new，都是从spring容器获得<br>        UserService userService = (UserService) applicationContext.getBean(“userServiceId”);<br>        userService.addUser();</p>
+<pre><code>}
+</code></pre><p>3    入门案例：DI【掌握】<br>    DI Dependency Injection ,依赖注入<br>    is a ：是一个，继承。<br>    has a：有一个，成员变量，依赖。<br>        class B {<br>           private A a;   //B类依赖A类<br>        }<br>    依赖：一个对象需要使用另一个对象<br>    注入：通过setter方法进行另一个对象实例设置。<br>    例如：<br>    class BookServiceImpl{<br>        //之前开发：接口 = 实现类  （service和dao耦合）<br>        //private BookDao bookDao = new BookDaoImpl();<br>         //spring之后 （解耦：service实现类使用dao接口，不知道具体的实现类）<br>        private BookDao bookDao;<br>        setter方法<br>   }<br>    模拟spring执行过程<br>    创建service实例：BookService bookService = new BookServiceImpl()        –&gt;IoC  <bean><br>    创建dao实例：BookDao bookDao = new BookDaoImple()                –&gt;IoC<br>    将dao设置给service：bookService.setBookDao(bookDao);                –&gt;DI   <property></property></bean></p>
+<p>3.1    目标类<br>    创建BookService接口和实现类<br>    创建BookDao接口和实现类<br>    将dao和service配置 xml文件<br>    使用api测试<br>3.1.1    dao<br>public interface BookDao {</p>
+<pre><code>public void addBook();
+</code></pre><p>}<br>public class BookDaoImpl implements BookDao {</p>
+<pre><code>@Override
+public void addBook() {
+    System.out.println(&quot;di  add book&quot;);
+}
+</code></pre><p>}</p>
+<p>3.1.2    service</p>
+<p>public interface BookService {</p>
+<pre><code>public abstract void addBook();
+</code></pre><p>}<br>public class BookServiceImpl implements BookService {</p>
+<pre><code>// 方式1：之前，接口=实现类
+</code></pre><p>//    private BookDao bookDao = new BookDaoImpl();<br>    // 方式2：接口 + setter<br>    private BookDao bookDao;<br>    public void setBookDao(BookDao bookDao) {<br>        this.bookDao = bookDao;<br>    }</p>
+<pre><code>@Override
+public void addBook(){
+    this.bookDao.addBook();
+}
+</code></pre><p>}</p>
+<p>3.2    配置文件</p>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans 
+                              http://www.springframework.org/schema/beans/spring-beans.xsd"><br>    <!-- 
+    模拟spring执行过程
+        创建service实例：BookService bookService = new BookServiceImpl()    IoC  <bean>
+        创建dao实例：BookDao bookDao = new BookDaoImpl()            IoC
+        将dao设置给service：bookService.setBookDao(bookDao);        DI   <property>
+
+        <property> 用于进行属性注入
+            name： bean的属性名，通过setter方法获得
+                setBookDao ##> BookDao  ##> bookDao
+            ref ：另一个bean的id值的引用
+     --><br><br>    <!-- 创建service --><br>    <bean id="bookServiceId" class="com.itheima.b_di.BookServiceImpl"><br>        <property name="bookDao" ref="bookDaoId"></property><br>    </bean><br><br>    <!-- 创建dao实例 --><br>    <bean id="bookDaoId" class="com.itheima.b_di.BookDaoImpl"></bean><br><br><br></beans>
+
+
+<p>3.3    测试<br>    @Test<br>    public void demo01(){<br>        //从spring容器获得<br>        String xmlPath = “com/itheima/b_di/beans.xml”;<br>        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);<br>        BookService bookService = (BookService) applicationContext.getBean(“bookServiceId”);</p>
+<pre><code>    bookService.addBook();
+
+}
+</code></pre><p>4    myeclipse schema xml提示<br>    步骤一：确定xsd文件位置<br>    spring-framework-3.2.0.RELEASE\schema\beans</p>
+<p>    步骤二：复制路径</p>
+<p>    步骤三：搜索“xml catalog”</p>
+<p>    步骤四：添加约束提示</p>
+<p>5    核心API<br>    api整体了解，之后不使用，在学习过程需要。</p>
+<p>    BeanFactory ：这是一个工厂，用于生成任意bean。<br>    采取延迟加载，第一次getBean时才会初始化Bean<br>    ApplicationContext：是BeanFactory的子接口，功能更强大。（国际化处理、事件传递、Bean自动装配、各种不同应用层的Context实现）。当配置文件被加载，就进行对象实例化。<br>    ClassPathXmlApplicationContext 用于加载classpath（类路径、src）下的xml<br>        加载xml运行时位置 –&gt; /WEB-INF/classes/…xml<br>    FileSystemXmlApplicationContext 用于加载指定盘符下的xml<br>        加载xml运行时位置 –&gt; /WEB-INF/…xml<br>            通过java web ServletContext.getRealPath() 获得具体盘符</p>
+<pre><code>@Test
+public void demo02(){
+    //使用BeanFactory  --第一次条用getBean实例化
+    String xmlPath = &quot;com/itheima/b_di/beans.xml&quot;;
+
+    BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource(xmlPath));
+
+    BookService bookService = (BookService) beanFactory.getBean(&quot;bookServiceId&quot;);
+
+    bookService.addBook();
+
+}
+</code></pre><p>6    装配Bean 基于XML<br>6.1    实例化方式<br>    3种bean实例化方式：默认构造、静态工厂、实例工厂<br>    </p>
+<p>6.1.1    默认构造</p>
+<bean id="" class="">  必须提供默认构造<br><br>6.1.2    静态工厂<br>    常用与spring整合其他框架（工具）<br>    静态工厂：用于生成实例对象，所有的方法必须是static<br><bean id="" class="工厂全限定类名" factory-method="静态方法"><br><br>6.1.2.1    工厂<br>public class MyBeanFactory {<br><br>    /*<em>
+     </em> 创建实例<br>     <em> @return
+     </em>/<br>    public static UserService createService(){<br>        return new UserServiceImpl();<br>    }<br>}<br><br>6.1.2.2    spring配置<br>    <!-- 将静态工厂创建的实例交予spring 
+        class 确定静态工厂全限定类名
+        factory-method 确定静态方法名
+    --><br>    <bean id="userServiceId" class="com.itheima.c_inject.b_static_factory.MyBeanFactory" factory-method="createService"></bean>
+
+<p>6.1.3    实例工厂<br>    实例工厂：必须先有工厂实例对象，通过实例对象创建对象。提供所有的方法都是“非静态”的。</p>
+<p>6.1.3.1    工厂<br>/**</p>
+<ul>
+<li><p>实例工厂,所有方法非静态<br><em>
+</em>/<br>public class MyBeanFactory {</p>
+<p> /**</p>
+<ul>
+<li>创建实例</li>
+<li>@return<br>*/<br>public UserService createService(){<br> return new UserServiceImpl();<br>}</li>
+</ul>
+</li>
+</ul>
+<p>}</p>
+<p>6.1.3.2    spring配置</p>
+<pre><code>&lt;!-- 创建工厂实例 --&gt;
+&lt;bean id=&quot;myBeanFactoryId&quot; class=&quot;com.itheima.c_inject.c_factory.MyBeanFactory&quot;&gt;&lt;/bean&gt;
+&lt;!-- 获得userservice 
+    * factory-bean 确定工厂实例
+    * factory-method 确定普通方法
+--&gt;
+</code></pre><p>创建bean实例<br>    <bean id="userServiceId" factory-bean="myBeanFactoryId" factory-method="createService"></bean></p>
+<p>6.2    Bean种类<br>    普通bean：之前操作的都是普通bean。<bean id="" class="A"> ，spring直接创建A实例，并返回<br>    FactoryBean：是一个特殊的bean，具有工厂生成对象能力，只能生成特定的对象。<br>    bean必须使用 FactoryBean接口，此接口提供方法 getObject() 用于获得特定bean。<br>    <bean id="" class="FB"> 先创建FB实例，使用调用getObject()方法，并返回方法的返回值<br>        FB fb = new FB();<br>        return fb.getObject();<br>    BeanFactory 和 FactoryBean 对比？<br>    BeanFactory：工厂，用于生成任意bean。<br>    FactoryBean：特殊bean，用于生成另一个特定的bean。例如：ProxyFactoryBean ，此工厂bean用于生产代理。<bean id="" class="....ProxyFactoryBean"> 获得代理对象实例。AOP使用</bean></bean></bean></p>
+<p>6.3    作用域（掌握）<br>    作用域：用于确定spring创建bean实例个数</p>
+<p>    取值：<br>    singleton 单例，默认值。<br>    prototype 多例，每执行一次getBean将获得一个实例。例如：struts整合spring，配置action多例。<br>    配置信息</p>
+<bean id="" class="" scope=""><br><br><br><bean id="userServiceId" class="com.itheima.d_scope.UserServiceImpl" scope="prototype"></bean>
+
+
+<p>6.4    生命周期<br>6.4.1    初始化和销毁<br>    目标方法执行前后执行后，将进行初始化或销毁。</p>
+<bean id="" class="" init-method="初始化方法名称" destroy-method="销毁的方法名称"><br><br>6.4.1.1    目标类<br>public class UserServiceImpl implements UserService {<br><br>    @Override<br>    public void addUser() {<br>        System.out.println(“e_lifecycle add user”);<br>    }<br><br>    public void myInit(){<br>        System.out.println(“初始化”);<br>    }<br>    public void myDestroy(){<br>        System.out.println(“销毁”);<br>    }<br><br>}<br><br>6.4.1.2    spring配置<br><!--  
+        init-method 用于配置初始化方法,准备数据等
+        destroy-method 用于配置销毁方法,清理资源等
+    --><br>    <bean id="userServiceId" class="com.itheima.e_lifecycle.UserServiceImpl" init-method="myInit" destroy-method="myDestroy"></bean>
+
+<p>6.4.1.3    测试<br>@Test<br>    public void demo02() throws Exception{<br>        //spring 工厂<br>        String xmlPath = “com/itheima/e_lifecycle/beans.xml”;<br>        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);<br>        UserService userService = (UserService) applicationContext.getBean(“userServiceId”);<br>        userService.addUser();</p>
+<pre><code>//要求：1.容器必须close，销毁方法才执行; 2.必须是单例的
+</code></pre><p>//        applicationContext.getClass().getMethod(“close”).invoke(applicationContext);<br>        // * 此方法接口中没有定义，实现类提供<br>        applicationContext.close();</p>
+<pre><code>}
+</code></pre><p>6.4.2    接口BeanPostProcessor 后处理Bean<br>    spring 提供一种机制，只要实现此接口BeanPostProcessor，并将实现类提供给spring容器，spring容器将自动执行，在初始化方法前执行before()，在初始化方法后执行after() 。 配置<bean class=""></bean></p>
+<p>    Factory hook(勾子) that allows for custom modification of new bean instances, e.g. checking for marker interfaces or wrapping them with proxies.<br>    spring提供工厂勾子，用于修改实例对象，可以生成代理对象，是AOP底层。<br>模拟<br>A a =new A();<br>a = B.before(a)            –&gt; 将a的实例对象传递给后处理bean，可以生成代理对象并返回。<br>a.init();<br>a = B.after(a);</p>
+<p>a.addUser();        //生成代理对象，目的在目标方法前后执行（例如：开启事务、提交事务）</p>
+<p>a.destroy()</p>
+<p>6.4.2.1    编写实现类<br>public class MyBeanPostProcessor implements BeanPostProcessor {</p>
+<pre><code>@Override
+public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+    System.out.println(&quot;前方法 ： &quot; + beanName);
+    return bean;
+}
+
+@Override
+public Object postProcessAfterInitialization(final Object bean, String beanName) throws BeansException {
+    System.out.println(&quot;后方法 ： &quot; + beanName);
+    // bean 目标对象
+    // 生成 jdk 代理
+    return Proxy.newProxyInstance(
+                MyBeanPostProcessor.class.getClassLoader(), 
+                bean.getClass().getInterfaces(), 
+                new InvocationHandler(){
+                    @Override
+                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+
+                        System.out.println(&quot;------开启事务&quot;);
+
+                        //执行目标方法
+                        Object obj = method.invoke(bean, args);
+
+                        System.out.println(&quot;------提交事务&quot;);
+                        return obj;
+                    }});
+}
+</code></pre><p>}</p>
+<p>6.4.2.2    配置<br><!-- 将后处理的实现类注册给spring --><br>    <bean class="com.itheima.e_lifecycle.MyBeanPostProcessor"></bean></p>
+<p>    问题1：后处理bean作用某一个目标类，还是所有目标类？<br>    所有<br>    问题2：如何只作用一个？<br>    通过“参数2”beanName进行控制</p>
+<p>6.5    属性依赖注入<br>    依赖注入方式：手动装配 和 自动装配<br>    手动装配：一般进行配置信息都采用手动<br>    基于xml装配：构造方法、setter方法<br>    基于注解装配：<br>    自动装配：struts和spring 整合可以自动装配<br>    byType：按类型装配<br>    byName：按名称装配<br>    constructor构造装配，<br>    auto： 不确定装配。<br>6.5.1    构造方法<br>6.5.1.1    目标类<br>public class User {</p>
+<pre><code>private Integer uid;
+private String username;
+private Integer age;
+
+public User(Integer uid, String username) {
+    super();
+    this.uid = uid;
+    this.username = username;
+}
+
+public User(String username, Integer age) {
+    super();
+    this.username = username;
+    this.age = age;
+}
+</code></pre><p>6.5.1.2    spring配置<br>    &lt;!– 构造方法注入 </p>
+<pre><code>    * &lt;constructor-arg&gt; 用于配置构造方法一个参数argument
+        name ：参数的名称
+        value：设置普通数据
+        ref：引用数据，一般是另一个bean id值
+
+        index ：参数的索引号，从0开始 。如果只有索引，匹配到了多个构造方法时，默认使用第一个。
+        type ：确定参数类型
+    例如：使用名称name
+        &lt;constructor-arg name=&quot;username&quot; value=&quot;jack&quot;&gt;&lt;/constructor-arg&gt;
+        &lt;constructor-arg name=&quot;age&quot; value=&quot;18&quot;&gt;&lt;/constructor-arg&gt;
+    例如2：【类型type 和  索引 index】
+        &lt;constructor-arg index=&quot;0&quot; type=&quot;java.lang.String&quot; value=&quot;1&quot;&gt;&lt;/constructor-arg&gt;
+        &lt;constructor-arg index=&quot;1&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;&gt;&lt;/constructor-arg&gt;
+--&gt;
+&lt;bean id=&quot;userId&quot; class=&quot;com.itheima.f_xml.a_constructor.User&quot; &gt;
+    &lt;constructor-arg index=&quot;0&quot; type=&quot;java.lang.String&quot; value=&quot;1&quot;&gt;&lt;/constructor-arg&gt;
+    &lt;constructor-arg index=&quot;1&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;&gt;&lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</code></pre><p>6.5.2    setter方法<br>&lt;!– setter方法注入<br>1、生成相应的get/set方法<br>2、配置xml:</p>
+<pre><code>    * 普通数据 
+        &lt;property name=&quot;&quot; value=&quot;值&quot;&gt;
+        等效
+        &lt;property name=&quot;&quot;&gt;
+            &lt;value&gt;值&lt;/value&gt;
+    * 引用数据
+        &lt;property name=&quot;&quot; ref=&quot;另一个bean&quot;&gt;
+        等效
+        &lt;property name=&quot;&quot;&gt;
+            &lt;ref bean=&quot;另一个bean&quot;/&gt;
+
+--&gt;
+&lt;bean id=&quot;personId&quot; class=&quot;com.itheima.f_xml.b_setter.Person&quot;&gt;
+    &lt;property name=&quot;pname&quot; value=&quot;阳志&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;age&quot;&gt;
+        &lt;value&gt;1234&lt;/value&gt;
+    &lt;/property&gt;
+
+    &lt;property name=&quot;homeAddr&quot; ref=&quot;homeAddrId&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;companyAddr&quot;&gt;
+        &lt;ref bean=&quot;companyAddrId&quot;/&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;homeAddrId&quot; class=&quot;com.itheima.f_xml.b_setter.Address&quot;&gt;
+    &lt;property name=&quot;addr&quot; value=&quot;阜南&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;tel&quot; value=&quot;911&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+&lt;bean id=&quot;companyAddrId&quot; class=&quot;com.itheima.f_xml.b_setter.Address&quot;&gt;
+    &lt;property name=&quot;addr&quot; value=&quot;北京八宝山&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;tel&quot; value=&quot;120&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>6.5.3    P命令空间[了解]<br>    对“setter方法注入”进行简化，替换<property name="属性名">，而是在<br>    <bean p:属性名="普通值" p:属性名-ref="引用值"><br>    p命名空间使用前提，必须添加命名空间</bean></property></p>
+<pre><code>&lt;bean id=&quot;personId&quot; class=&quot;com.itheima.f_xml.c_p.Person&quot; 
+    p:pname=&quot;禹太璞&quot; p:age=&quot;22&quot; 
+    p:homeAddr-ref=&quot;homeAddrId&quot; p:companyAddr-ref=&quot;companyAddrId&quot;&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;homeAddrId&quot; class=&quot;com.itheima.f_xml.c_p.Address&quot;
+    p:addr=&quot;DG&quot; p:tel=&quot;东莞&quot;&gt;
+&lt;/bean&gt;
+&lt;bean id=&quot;companyAddrId&quot; class=&quot;com.itheima.f_xml.c_p.Address&quot;
+    p:addr=&quot;DG&quot; p:tel=&quot;岛国&quot;&gt;
+&lt;/bean&gt;
+</code></pre><p>6.5.4    SpEL[了解]<br>    对<property>进行统一编程，所有的内容都使用value<br>    <property name="" value="#{表达式}"></property></property></p>
+<pre><code>#{123}、#{&apos;jack&apos;} ： 数字、字符串
+#{beanId}    ：另一个bean引用
+#{beanId.propName}    ：操作数据
+#{beanId.toString()}    ：执行方法
+#{T(类).字段|方法}    ：静态方法或字段
+
+&lt;!-- 
+    &lt;property name=&quot;cname&quot; value=&quot;#{&apos;jack&apos;}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;cname&quot; value=&quot;#{customerId.cname.toUpperCase()}&quot;&gt;&lt;/property&gt;
+        通过另一个bean，获得属性，调用的方法
+    &lt;property name=&quot;cname&quot; value=&quot;#{customerId.cname?.toUpperCase()}&quot;&gt;&lt;/property&gt;
+        ?.  如果对象不为null，将调用方法
+--&gt;
+&lt;bean id=&quot;customerId&quot; class=&quot;com.itheima.f_xml.d_spel.Customer&quot; &gt;
+    &lt;property name=&quot;cname&quot; value=&quot;#{customerId.cname?.toUpperCase()}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;pi&quot; value=&quot;#{T(java.lang.Math).PI}&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>    阅读：</p>
+<p>6.5.5    集合注入<br>&lt;!–<br>        集合的注入都是给<property>添加子标签<br>            数组：<array><br>            List：<list><br>            Set：<set><br>            Map：<map> ，map存放k/v 键值对，使用<entry>描述<br>            Properties：<props>  <prop key=""></prop>  【】</props></entry></map></set></list></array></property></p>
+<pre><code>    普通数据：&lt;value&gt;
+    引用数据：&lt;ref&gt;
+--&gt;
+&lt;bean id=&quot;collDataId&quot; class=&quot;com.itheima.f_xml.e_coll.CollData&quot; &gt;
+    &lt;property name=&quot;arrayData&quot;&gt;
+        &lt;array&gt;
+            &lt;value&gt;DS&lt;/value&gt;
+            &lt;value&gt;DZD&lt;/value&gt;
+            &lt;value&gt;屌丝&lt;/value&gt;
+            &lt;value&gt;屌中屌&lt;/value&gt;
+        &lt;/array&gt;
+    &lt;/property&gt;
+
+    &lt;property name=&quot;listData&quot;&gt;
+        &lt;list&gt;
+            &lt;value&gt;于嵩楠&lt;/value&gt;
+            &lt;value&gt;曾卫&lt;/value&gt;
+            &lt;value&gt;杨煜&lt;/value&gt;
+            &lt;value&gt;曾小贤&lt;/value&gt;
+        &lt;/list&gt;
+    &lt;/property&gt;
+
+    &lt;property name=&quot;setData&quot;&gt;
+        &lt;set&gt;
+            &lt;value&gt;停封&lt;/value&gt;
+            &lt;value&gt;薄纸&lt;/value&gt;
+            &lt;value&gt;关系&lt;/value&gt;
+        &lt;/set&gt;
+    &lt;/property&gt;
+
+    &lt;property name=&quot;mapData&quot;&gt;
+        &lt;map&gt;
+            &lt;entry key=&quot;jack&quot; value=&quot;杰克&quot;&gt;&lt;/entry&gt;
+            &lt;entry&gt;
+                &lt;key&gt;&lt;value&gt;rose&lt;/value&gt;&lt;/key&gt;
+                &lt;value&gt;肉丝&lt;/value&gt;
+            &lt;/entry&gt;
+        &lt;/map&gt;
+    &lt;/property&gt;
+
+    &lt;property name=&quot;propsData&quot;&gt;
+        &lt;props&gt;
+            &lt;prop key=&quot;高富帅&quot;&gt;嫐&lt;/prop&gt;
+            &lt;prop key=&quot;白富美&quot;&gt;嬲&lt;/prop&gt;
+            &lt;prop key=&quot;男屌丝&quot;&gt;挊&lt;/prop&gt;
+        &lt;/props&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>7    装配Bean 基于注解<br>    注解：就是一个类，使用@注解名称<br>    开发中：使用注解 取代 xml配置文件。</p>
+<ol>
+<li>@Component取代<bean class=""><br> @Component(“id”) 取代 <bean id="" class=""><br>2.web开发，提供3个@Component注解衍生注解（功能一样）取代<bean class=""><br> @Repository ：dao层<br> @Service：service层<br> @Controller：web层<br>3.依赖注入    ，给私有字段设置，也可以给setter方法设置<br> 普通值：@Value(“”)<br> 引用值：<pre><code>方式1：按照【类型】注入
+    @Autowired
+方式2：按照【名称】注入1
+    @Autowired
+    @Qualifier(&quot;名称&quot;)
+方式3：按照【名称】注入2
+    @Resource(&quot;名称&quot;)
+</code></pre>4.生命周期<br> 初始化：@PostConstruct<br> 销毁：@PreDestroy<br>5.作用域<br> @Scope(“prototype”) 多例</bean></bean></bean></li>
+</ol>
+<p>    注解使用前提，添加命名空间，让spring扫描含有注解类</p>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xsi:schemalocation="http://www.springframework.org/schema/beans 
+                              http://www.springframework.org/schema/beans/spring-beans.xsd
+                              http://www.springframework.org/schema/context 
+                              http://www.springframework.org/schema/context/spring-context.xsd"><br>    <!-- 组件扫描，扫描含有注解的类 --><br>    &lt;context:component-scan base-package=”com.itheima.g_annotation.a_ioc”&gt;&lt;/context:component-scan&gt;<br></beans>
+
+<p>8    要求<br>先练习：xml<br>    IoC<br>    DI<br>    xml配置<br>        实例化方式<br>        作用域<br>        生命周期<br>        属性注入：构造方法、setter、、集合<br>再练习：注解<br>    web开发<br>（p命名空间、SpEL）</p>
+</bean></bean></bean></bean>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/07/11/spring教程（二）/" class="pre-post btn btn-default" title='spring教程（二）'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">spring教程（二）</span>
+        </a>
+    
+    
+        <a href="/2018/07/11/MySQL数据库设计规范/" class="next-post btn btn-default" title='MySQL数据库设计规范'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">MySQL数据库设计规范</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>spring教程（二） | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/lujiao.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="spring教程（二）">
+            
+	            spring教程（二）
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/11</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1    spring day01回顾<br>1.1    编写流程(基于xml)<br>1.导入jar包：4+1  –&gt; beans/core/context/expression  | commons-logging<br>2.编写目标类：dao和service<br>3.spring配置文件<br>IoC：<bean id="" class=""><br>DI：<bean> <property name="" value="" |="" ref=""><br>实例化方式：<br>  默认构造<br>  静态工厂：<bean id="" class="工厂类" factory-method="静态方法"><br>  实例工厂：<bean id="工厂id" class="工厂类">  <bean id="" factory-bean="工厂id" factory-method="方法"><br>作用域：<bean id="" class="" scope="singleton | prototype"><br>生命周期：<bean id="" class="" init-method="" destroy-method=""><br>  后处理bean  BeanPostProcessor接口，<bean class="注册"> ，对容器中所有的bean都生效<br>属性注入<br>  构造方法注入：<bean><constructor-arg index="" type=""><br>  setter方法注入：<bean><property><br>  p命名空间：简化<property>   <bean p:属性名="普通值" p:属性名-ref="引用值">  注意声明命名空间<br>  SpEL：<property name="" value="#{表达式}"></property></bean></property></property></bean></constructor-arg></bean></bean></bean></bean></bean></bean></bean></property></bean></bean></p>
+<pre><code>#{123}  #{&apos;abc&apos;}
+#{beanId.propName?.methodName()}
+#{T(类).静态方法|字段}
+</code></pre><p>  集合<br>     数组<array><br>     List <list><br>     Set <set><br>     Map <map><entry key="" value=""><br>     Properties <props><prop key="">….<br>IoC：<br>4.核心api<br>    BeanFactory，延迟实例化bean，第一次调用getBean<br>    ApplicationContext 一般常用，功能更强<br>        ClassPathXmlApplicationContext 加载classpath xml文件<br>        FileSystemXmlApplicationContext 加载指定盘符文件 ， ServletContext.getRealPath()</prop></props></entry></map></set></list></array></p>
+<p>1.2    后处理bean 对一个生效<br>@Override<br>    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {<br>        if(“userServiceId”.equals(beanName)){<br>            System.out.println(“前方法 ： “ + beanName);<br>        }<br>        return bean;<br>    }</p>
+<p>1.3    注解<br>1.扫描含有注解的类<br>    &lt;context:component-scan base-package=”….”&gt;<br>2.常见的注解<br>    @Component  组件，任意bean<br>    WEB<br>        @Controller  web层<br>        @Service service层<br>        @Repository dao层<br>    注入  –&gt; 字段或setter方法<br>        普通值：@Value<br>        引用值：<br>            类型：@Autowired<br>            名称1：@Autowired  @Qualifier(“名称”)<br>            名称2：@Resource(“名称”)<br>    作用域：@Scope(“prototype”)<br>    生命周期：<br>        初始化：@PostConstruct<br>        销毁方法：@PreDestroy</p>
+<p>1.4    注解和xml混合使用<br>1.将所有的bean都配置xml中<br>    <bean id="" class=""><br>2.将所有的依赖都使用注解<br>    @Autowired<br>    默认不生效。为了生效，需要在xml配置：<a href="context:annotation-config" target="_blank" rel="noopener">context:annotation-config</a></bean></p>
+<p>总结：<br>注解1：&lt;context:component-scan base-package=” “&gt;<br>注解2：<a href="context:annotation-config" target="_blank" rel="noopener">context:annotation-config</a><br>1.一般情况两个注解不一起使用。</p>
+<ol start="2">
+<li>“注解1”扫描含有注解（@Component 等）类，注入注解自动生效。<br> “注解2”只在xml和注解（注入）混合使用时，使注入注解生效。</li>
+</ol>
+<p>2    AOP<br>2.1    AOP介绍<br>2.1.1    什么是AOP<br>    在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。<br>    AOP采取横向抽取机制，取代了传统纵向继承体系重复性代码<br>    经典应用：事务管理、性能监视、安全检查、缓存 、日志等<br>    Spring AOP使用纯Java实现，不需要专门的编译过程和类加载器，在运行期通过代理方式向目标类织入增强代码<br>    AspectJ是一个基于Java语言的AOP框架，Spring2.0开始，Spring AOP引入对Aspect的支持，AspectJ扩展了Java语言，提供了一个专门的编译器，在编译时提供横向代码的织入</p>
+<p>2.1.2    AOP实现原理<br>    aop底层将采用代理机制进行实现。<br>    接口 + 实现类 ：spring采用 jdk 的动态代理Proxy。<br>    实现类：spring 采用 cglib字节码增强。</p>
+<p>2.1.3    AOP术语【掌握】<br>1.target：目标类，需要被代理的类。例如：UserService<br>2.Joinpoint(连接点):所谓连接点是指那些可能被拦截到的方法。例如：所有的方法<br>3.PointCut 切入点：已经被增强的连接点。例如：addUser()<br>4.advice 通知/增强，增强代码。例如：after、before</p>
+<ol start="5">
+<li>Weaving(织入):是指把增强advice应用到目标对象target来创建新的代理对象proxy的过程.<br>6.proxy 代理类</li>
+<li>Aspect(切面): 是切入点pointcut和通知advice的结合<br> 一个线是一个特殊的面。<br> 一个切入点和一个通知，组成成一个特殊的面。</li>
+</ol>
+<p>2.2    手动方式<br>2.2.1    JDK动态代理<br>    JDK动态代理 对“装饰者”设计模式 简化。使用前提：必须有接口<br>1.目标类：接口 + 实现类<br>2.切面类：用于存通知 MyAspect<br>3.工厂类：编写工厂生成代理<br>4.测试</p>
+<p>2.2.1.1    目标类<br>public interface UserService {</p>
+<pre><code>public void addUser();
+public void updateUser();
+public void deleteUser();
+</code></pre><p>}</p>
+<p>2.2.1.2    切面类<br>public class MyAspect {</p>
+<pre><code>public void before(){
+    System.out.println(&quot;鸡首&quot;);
+}
+
+public void after(){
+    System.out.println(&quot;牛后&quot;);
+}
+</code></pre><p>}</p>
+<p>2.2.1.3    工厂<br>public class MyBeanFactory {</p>
+<pre><code>public static UserService createService(){
+    //1 目标类
+    final UserService userService = new UserServiceImpl();
+    //2切面类
+    final MyAspect myAspect = new MyAspect();
+    /* 3 代理类：将目标类（切入点）和 切面类（通知） 结合 --&gt; 切面
+     *     Proxy.newProxyInstance
+     *         参数1：loader ，类加载器，动态代理类 运行时创建，任何类都需要类加载器将其加载到内存。
+     *             一般情况：当前类.class.getClassLoader();
+     *                     目标类实例.getClass().get...
+     *         参数2：Class[] interfaces 代理类需要实现的所有接口
+     *             方式1：目标类实例.getClass().getInterfaces()  ;注意：只能获得自己接口，不能获得父元素接口
+     *             方式2：new Class[]{UserService.class}   
+     *             例如：jdbc 驱动  --&gt; DriverManager  获得接口 Connection
+     *         参数3：InvocationHandler  处理类，接口，必须进行实现类，一般采用匿名内部
+     *             提供 invoke 方法，代理类的每一个方法执行时，都将调用一次invoke
+     *                 参数31：Object proxy ：代理对象
+     *                 参数32：Method method : 代理对象当前执行的方法的描述对象（反射）
+     *                     执行方法名：method.getName()
+     *                     执行方法：method.invoke(对象，实际参数)
+     *                 参数33：Object[] args :方法实际参数
+     * 
+     */
+    UserService proxService = (UserService)Proxy.newProxyInstance(
+                            MyBeanFactory.class.getClassLoader(), 
+                            userService.getClass().getInterfaces(), 
+                            new InvocationHandler() {
+
+                                @Override
+                                public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+
+                                    //前执行
+                                    myAspect.before();
+
+                                    //执行目标类的方法
+                                    Object obj = method.invoke(userService, args);
+
+                                    //后执行
+                                    myAspect.after();
+
+                                    return obj;
+                                }
+                            });
+
+    return proxService;
+}
+</code></pre><p>}</p>
+<p>2.2.1.4    测试<br>@Test<br>    public void demo01(){<br>        UserService userService = MyBeanFactory.createService();<br>        userService.addUser();<br>        userService.updateUser();<br>        userService.deleteUser();<br>    }</p>
+<p>2.2.2    CGLIB字节码增强<br>    没有接口，只有实现类。<br>    采用字节码增强框架 cglib，在运行时 创建目标类的子类，从而对目标类进行增强。<br>    导入jar包：<br>    自己导包（了解）：<br>        核心：hibernate-distribution-3.6.10.Final\lib\bytecode\cglib\cglib-2.2.jar<br>        依赖：struts-2.3.15.3\apps\struts2-blank\WEB-INF\lib\asm-3.3.jar<br>    spring-core..jar 已经整合以上两个内容</p>
+<p>2.2.2.1    工厂类<br>public class MyBeanFactory {</p>
+<pre><code>public static UserServiceImpl createService(){
+    //1 目标类
+    final UserServiceImpl userService = new UserServiceImpl();
+    //2切面类
+    final MyAspect myAspect = new MyAspect();
+    // 3.代理类 ，采用cglib，底层创建目标类的子类
+    //3.1 核心类
+    Enhancer enhancer = new Enhancer();
+    //3.2 确定父类
+    enhancer.setSuperclass(userService.getClass());
+    /* 3.3 设置回调函数 , MethodInterceptor接口 等效 jdk InvocationHandler接口
+     *     intercept() 等效 jdk  invoke()
+     *         参数1、参数2、参数3：以invoke一样
+     *         参数4：methodProxy 方法的代理
+     *         
+     * 
+     */
+    enhancer.setCallback(new MethodInterceptor(){
+
+        @Override
+        public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+
+            //前
+            myAspect.before();
+
+            //执行目标类的方法
+            Object obj = method.invoke(userService, args);
+            // * 执行代理类的父类 ，执行目标类 （目标类和代理类 父子关系）
+            methodProxy.invokeSuper(proxy, args);
+
+            //后
+            myAspect.after();
+
+            return obj;
+        }
+    });
+</code></pre><p>//3.4 创建代理<br>        UserServiceImpl proxService = (UserServiceImpl) enhancer.create();</p>
+<pre><code>    return proxService;
+}
+</code></pre><p>}</p>
+<p>2.3    AOP联盟通知类型<br>    AOP联盟为通知Advice定义了org.aopalliance.aop.Advice<br>    Spring按照通知Advice在目标类方法的连接点位置，可以分为5类<br>•    前置通知 org.springframework.aop.MethodBeforeAdvice<br>•    在目标方法执行前实施增强<br>•    后置通知 org.springframework.aop.AfterReturningAdvice<br>•    在目标方法执行后实施增强<br>•    环绕通知 org.aopalliance.intercept.MethodInterceptor<br>•    在目标方法执行前后实施增强<br>•    异常抛出通知 org.springframework.aop.ThrowsAdvice<br>•    在方法抛出异常后实施增强<br>•    引介通知 org.springframework.aop.IntroductionInterceptor<br>•    在目标类中添加一些新的方法和属性</p>
+<p>环绕通知，必须手动执行目标方法<br>try{<br>   //前置通知<br>   //执行目标方法<br>   //后置通知<br>} catch(){<br>   //抛出异常通知<br>}</p>
+<p>2.4    spring编写代理:半自动<br>    让spring 创建代理对象，从spring容器中手动的获取代理对象。<br>    导入jar包：<br>    核心：4+1<br>    AOP：AOP联盟（规范）、spring-aop （实现）</p>
+<p>2.4.1    目标类<br>public interface UserService {</p>
+<pre><code>public void addUser();
+public void updateUser();
+public void deleteUser();
+</code></pre><p>}</p>
+<p>2.4.2    切面类<br>/**</p>
+<ul>
+<li>切面类中确定通知，需要实现不同接口，接口就是规范，从而就确定方法名称。</li>
+<li><ul>
+<li><p>采用“环绕通知” MethodInterceptor<br><em>
+</em>/<br>public class MyAspect implements MethodInterceptor {</p>
+<p>@Override<br>public Object invoke(MethodInvocation mi) throws Throwable {</p>
+<p>   System.out.println(“前3”);</p>
+<p>   //手动执行目标方法<br>   Object obj = mi.proceed();</p>
+<p>   System.out.println(“后3”);<br>   return obj;<br>}<br>}</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>2.4.3    spring配置<br><!-- 1 创建目标类 --><br>    <bean id="userServiceId" class="com.itheima.b_factory_bean.UserServiceImpl"></bean><br>    <!-- 2 创建切面类 --><br>    <bean id="myAspectId" class="com.itheima.b_factory_bean.MyAspect"></bean></p>
+<pre><code>&lt;!-- 3 创建代理类 
+    * 使用工厂bean FactoryBean ，底层调用 getObject() 返回特殊bean
+    * ProxyFactoryBean 用于创建代理工厂bean，生成特殊代理对象
+        interfaces : 确定接口们
+            通过&lt;array&gt;可以设置多个值
+            只有一个值时，value=&quot;&quot;
+        target : 确定目标类
+        interceptorNames : 通知 切面类的名称，类型String[]，如果设置一个值 value=&quot;&quot;
+        optimize :强制使用cglib
+            &lt;property name=&quot;optimize&quot; value=&quot;true&quot;&gt;&lt;/property&gt;
+    底层机制
+        如果目标类有接口，采用jdk动态代理
+        如果没有接口，采用cglib 字节码增强
+        如果声明 optimize = true ，无论是否有接口，都采用cglib
+
+--&gt;
+&lt;bean id=&quot;proxyServiceId&quot; class=&quot;org.springframework.aop.framework.ProxyFactoryBean&quot;&gt;
+    &lt;property name=&quot;interfaces&quot; value=&quot;com.itheima.b_factory_bean.UserService&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;target&quot; ref=&quot;userServiceId&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;interceptorNames&quot; value=&quot;myAspectId&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>2.4.4    测试</p>
+<pre><code>@Test
+public void demo01(){
+    String xmlPath = &quot;com/itheima/b_factory_bean/beans.xml&quot;;
+    ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
+
+    //获得代理类
+    UserService userService = (UserService) applicationContext.getBean(&quot;proxyServiceId&quot;);
+    userService.addUser();
+    userService.updateUser();
+    userService.deleteUser();
+}
+</code></pre><p>2.5    spring aop编程：全自动【掌握】<br>    从spring容器获得目标类，如果配置aop，spring将自动生成代理。<br>    要确定目标类，aspectj 切入点表达式，导入jar包<br>    spring-framework-3.0.2.RELEASE-dependencies\org.aspectj\com.springsource.org.aspectj.weaver\1.6.8.RELEASE</p>
+<p>2.5.1    spring配置</p>
+<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemalocation="http://www.springframework.org/schema/beans 
+                              http://www.springframework.org/schema/beans/spring-beans.xsd
+                              http://www.springframework.org/schema/aop 
+                              http://www.springframework.org/schema/aop/spring-aop.xsd"><br>    <!-- 1 创建目标类 --><br>    <bean id="userServiceId" class="com.itheima.c_spring_aop.UserServiceImpl"></bean><br>    <!-- 2 创建切面类（通知） --><br>    <bean id="myAspectId" class="com.itheima.c_spring_aop.MyAspect"></bean><br>    <!-- 3 aop编程 
+        3.1 导入命名空间
+        3.2 使用 <aop:config>进行配置
+                proxy-target-class="true" 声明时使用cglib代理
+            <aop:pointcut> 切入点 ，从目标对象获得具体方法
+            <aop:advisor> 特殊的切面，只有一个通知 和 一个切入点
+                advice-ref 通知引用
+                pointcut-ref 切入点引用
+        3.3 切入点表达式
+            execution(* com.itheima.c_spring_aop.*.*(..))
+            选择方法         返回值任意   包             类名任意   方法名任意   参数任意
+
+    --><br>    &lt;aop:config proxy-target-class=”true”&gt;<br>        &lt;aop:pointcut expression=”execution(<em> com.itheima.c_spring_aop.</em>.*(..))” id=”myPointCut”/&gt;<br>        &lt;aop:advisor advice-ref=”myAspectId” pointcut-ref=”myPointCut”/&gt;<br>    &lt;/aop:config&gt;<br></beans>
+
+<p>2.5.2    测试<br>    @Test<br>    public void demo01(){<br>        String xmlPath = “com/itheima/c_spring_aop/beans.xml”;<br>        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);</p>
+<pre><code>    //获得目标类
+    UserService userService = (UserService) applicationContext.getBean(&quot;userServiceId&quot;);
+    userService.addUser();
+    userService.updateUser();
+    userService.deleteUser();
+}
+</code></pre><p>3    AspectJ<br>3.1    介绍<br>    AspectJ是一个基于Java语言的AOP框架<br>    Spring2.0以后新增了对AspectJ切点表达式支持<br>    @AspectJ 是AspectJ1.5新增功能，通过JDK5注解技术，允许直接在Bean类中定义切面<br>新版本Spring框架，建议使用AspectJ方式来开发AOP<br>    主要用途：自定义开发</p>
+<p>3.2    切入点表达式【掌握】<br>1.execution()  用于描述方法 【掌握】<br>    语法：execution(修饰符  返回值  包.类.方法名(参数) throws异常)<br>        修饰符，一般省略<br>            public        公共方法</p>
+<pre><code>    *            任意
+返回值，不能省略
+    void            返回没有值
+    String        返回值字符串
+    *             任意
+包，[省略]
+    com.itheima.crm            固定包
+    com.itheima.crm.*.service    crm包下面子包任意 （例如：com.itheima.crm.staff.service）
+    com.itheima.crm..            crm包下面的所有子包（含自己）
+    com.itheima.crm.*.service..    crm包下面任意子包，固定目录service，service目录任意包
+类，[省略]
+    UserServiceImpl            指定类
+    *Impl                    以Impl结尾
+    User*                    以User开头
+    *                        任意
+方法名，不能省略
+    addUser                    固定方法
+    add*                        以add开头
+    *Do                        以Do结尾
+    *                        任意
+(参数)
+    ()                        无参
+    (int)                        一个整型
+    (int ,int)                    两个
+    (..)                        参数任意
+throws ,可省略，一般不写。
+</code></pre><p>综合1<br>    execution(<em> com.itheima.crm.</em>.service..<em>.</em>(..))<br>综合2<br>    &lt;aop:pointcut expression=”execution(<em> com.itheima.</em>WithCommit.<em>(..)) ||<br>                          execution(</em> com.itheima.<em>Service.</em>(..))” id=”myPointCut”/&gt;<br>2.within:匹配包或子包中的方法(了解)<br>    within(com.itheima.aop..*)<br>3.this:匹配实现接口的代理对象中的方法(了解)<br>    this(com.itheima.aop.user.UserDAO)<br>4.target:匹配实现接口的目标对象中的方法(了解)<br>    target(com.itheima.aop.user.UserDAO)<br>5.args:匹配参数格式符合标准的方法(了解)<br>    args(int,int)<br>6.bean(id)  对指定的bean所有的方法(了解)<br>    bean(‘userServiceId’)</p>
+<p>3.3    AspectJ 通知类型<br>    aop联盟定义通知类型，具有特性接口，必须实现，从而确定方法名称。<br>    aspectj 通知类型，只定义类型名称。已经方法格式。<br>    个数：6种，知道5种，掌握1中。<br>    before:前置通知(应用：各种校验)<br>        在方法执行前执行，如果通知抛出异常，阻止方法运行<br>    afterReturning:后置通知(应用：常规数据处理)<br>        方法正常返回后执行，如果方法中抛出异常，通知无法执行<br>        必须在方法执行后才执行，所以可以获得方法的返回值。<br>    around:环绕通知(应用：十分强大，可以做任何事情)<br>        方法执行前后分别执行，可以阻止方法的执行<br>        必须手动执行目标方法<br>    afterThrowing:抛出异常通知(应用：包装异常信息)<br>        方法抛出异常后执行，如果方法没有抛出异常，无法执行<br>    after:最终通知(应用：清理现场)<br>        方法执行完毕后执行，无论方法中是否出现异常<br>环绕</p>
+<p>try{<br>     //前置：before<br>    //手动执行目标方法<br>    //后置：afterRetruning<br>} catch(){<br>    //抛出异常 afterThrowing<br>} finally{<br>    //最终 after<br>}</p>
+<p>3.4    导入jar包<br>    4个：<br>    aop联盟规范<br>    spring aop 实现<br>    aspect 规范<br>    spring aspect 实现</p>
+<p>3.5    基于xml<br>1.目标类：接口 + 实现<br>2.切面类：编写多个通知，采用aspectj 通知名称任意（方法名任意）<br>3.aop编程，将通知应用到目标类<br>4.测试</p>
+<p>3.5.1    切面类<br>/**</p>
+<ul>
+<li><p>切面类，含有多个通知<br>*/<br>public class MyAspect {</p>
+<p> public void myBefore(JoinPoint joinPoint){</p>
+<pre><code>System.out.println(&quot;前置通知 ： &quot; + joinPoint.getSignature().getName());
+</code></pre><p> }</p>
+<p> public void myAfterReturning(JoinPoint joinPoint,Object ret){</p>
+<pre><code>System.out.println(&quot;后置通知 ： &quot; + joinPoint.getSignature().getName() + &quot; , --&gt;&quot; + ret);
+</code></pre><p> }</p>
+<p> public Object myAround(ProceedingJoinPoint joinPoint) throws Throwable{</p>
+<pre><code>System.out.println(&quot;前&quot;);
+//手动执行目标方法
+Object obj = joinPoint.proceed();
+
+System.out.println(&quot;后&quot;);
+return obj;
+</code></pre><p> }</p>
+<p> public void myAfterThrowing(JoinPoint joinPoint,Throwable e){</p>
+<pre><code>System.out.println(&quot;抛出异常通知 ： &quot; + e.getMessage());
+</code></pre><p> }</p>
+<p> public void myAfter(JoinPoint joinPoint){</p>
+<pre><code>System.out.println(&quot;最终通知&quot;);
+</code></pre><p> }</p>
+</li>
+</ul>
+<p>}</p>
+<p>3.5.2    spring配置<br><!-- 1 创建目标类 --><br>    <bean id="userServiceId" class="com.itheima.d_aspect.a_xml.UserServiceImpl"></bean><br>    <!-- 2 创建切面类（通知） --><br>    <bean id="myAspectId" class="com.itheima.d_aspect.a_xml.MyAspect"></bean><br>    <!-- 3 aop编程 
+        <aop:aspect> 将切面类 声明“切面”，从而获得通知（方法）
+            ref 切面类引用
+        <aop:pointcut> 声明一个切入点，所有的通知都可以使用。
+            expression 切入点表达式
+            id 名称，用于其它通知引用
+    --><br>    <a href="aop:config" target="_blank" rel="noopener">aop:config</a><br>        &lt;aop:aspect ref=”myAspectId”&gt;<br>            &lt;aop:pointcut expression=”execution(<em> com.itheima.d_aspect.a_xml.UserServiceImpl.</em>(..))” id=”myPointCut”/&gt;</p>
+<pre><code>        &lt;!-- 3.1 前置通知 
+            &lt;aop:before method=&quot;&quot; pointcut=&quot;&quot; pointcut-ref=&quot;&quot;/&gt;
+                method : 通知，即方法名
+                pointcut :切入点表达式，此表达式只能当前通知使用。
+                pointcut-ref ： 切入点引用，可以与其他通知共享切入点。
+            通知方法格式：public void myBefore(JoinPoint joinPoint){
+                参数1：org.aspectj.lang.JoinPoint  用于描述连接点（目标方法），获得目标方法名等
+            例如：
+        &lt;aop:before method=&quot;myBefore&quot; pointcut-ref=&quot;myPointCut&quot;/&gt;
+        --&gt;
+
+        &lt;!-- 3.2后置通知  ,目标方法后执行，获得返回值
+            &lt;aop:after-returning method=&quot;&quot; pointcut-ref=&quot;&quot; returning=&quot;&quot;/&gt;
+                returning 通知方法第二个参数的名称
+            通知方法格式：public void myAfterReturning(JoinPoint joinPoint,Object ret){
+                参数1：连接点描述
+                参数2：类型Object，参数名 returning=&quot;ret&quot; 配置的
+            例如：
+        &lt;aop:after-returning method=&quot;myAfterReturning&quot; pointcut-ref=&quot;myPointCut&quot; returning=&quot;ret&quot; /&gt;
+        --&gt;
+
+        &lt;!-- 3.3 环绕通知 
+            &lt;aop:around method=&quot;&quot; pointcut-ref=&quot;&quot;/&gt;
+            通知方法格式：public Object myAround(ProceedingJoinPoint joinPoint) throws Throwable{
+                返回值类型：Object
+                方法名：任意
+                参数：org.aspectj.lang.ProceedingJoinPoint
+                抛出异常
+            执行目标方法：Object obj = joinPoint.proceed();
+            例如：
+        &lt;aop:around method=&quot;myAround&quot; pointcut-ref=&quot;myPointCut&quot;/&gt;
+        --&gt;
+        &lt;!-- 3.4 抛出异常
+            &lt;aop:after-throwing method=&quot;&quot; pointcut-ref=&quot;&quot; throwing=&quot;&quot;/&gt;
+                throwing ：通知方法的第二个参数名称
+            通知方法格式：public void myAfterThrowing(JoinPoint joinPoint,Throwable e){
+                参数1：连接点描述对象
+                参数2：获得异常信息，类型Throwable ，参数名由throwing=&quot;e&quot; 配置
+            例如：
+        &lt;aop:after-throwing method=&quot;myAfterThrowing&quot; pointcut-ref=&quot;myPointCut&quot; throwing=&quot;e&quot;/&gt;
+        --&gt;
+        &lt;!-- 3.5 最终通知 --&gt;            
+        &lt;aop:after method=&quot;myAfter&quot; pointcut-ref=&quot;myPointCut&quot;/&gt;
+
+
+
+    &lt;/aop:aspect&gt;
+&lt;/aop:config&gt;
+</code></pre><p>3.6    基于注解<br>3.6.1    替换bean<br><!-- 1 创建目标类 --><br>    <bean id="userServiceId" class="com.itheima.d_aspect.b_anno.UserServiceImpl"></bean><br>    <!-- 2 创建切面类（通知） --><br>    <bean id="myAspectId" class="com.itheima.d_aspect.b_anno.MyAspect"></bean></p>
+<p>    注意：扫描</p>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemalocation="http://www.springframework.org/schema/beans 
+                              http://www.springframework.org/schema/beans/spring-beans.xsd
+                              http://www.springframework.org/schema/aop 
+                              http://www.springframework.org/schema/aop/spring-aop.xsd
+                              http://www.springframework.org/schema/context 
+                              http://www.springframework.org/schema/context/spring-context.xsd"><br><!-- 1.扫描 注解类 --><br>    &lt;context:component-scan base-package=”com.itheima.d_aspect.b_anno”&gt;&lt;/context:component-scan&gt;</beans></p>
+<p>3.6.2    替换aop<br>    必须进行aspectj 自动代理<br><!-- 2.确定 aop注解生效 --><br>    <a href="aop:aspectj-autoproxy" target="_blank" rel="noopener">aop:aspectj-autoproxy</a>&lt;/aop:aspectj-autoproxy&gt;</p>
+<p>    声明切面<br> &lt;aop:aspect ref=”myAspectId”&gt;</p>
+<p>    替换前置通知<br>&lt;aop:before method=”myBefore” pointcut=”execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))”/&gt;</p>
+<pre><code>//切入点当前有效
+@Before(&quot;execution(* com.itheima.d_aspect.b_anno.UserServiceImpl.*(..))&quot;)
+public void myBefore(JoinPoint joinPoint){
+    System.out.println(&quot;前置通知 ： &quot; + joinPoint.getSignature().getName());
+}
+</code></pre><p>    替换 公共切入点<br>&lt;aop:pointcut expression=”execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))” id=”myPointCut”/&gt;</p>
+<p>//声明公共切入点<br>    @Pointcut(“execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))”)<br>    private void myPointCut(){<br>    }</p>
+<p>    替换后置<br>&lt;aop:after-returning method=”myAfterReturning” pointcut-ref=”myPointCut” returning=”ret” /&gt;</p>
+<pre><code>@AfterReturning(value=&quot;myPointCut()&quot; ,returning=&quot;ret&quot;)
+public void myAfterReturning(JoinPoint joinPoint,Object ret){
+    System.out.println(&quot;后置通知 ： &quot; + joinPoint.getSignature().getName() + &quot; , --&gt;&quot; + ret);
+}
+</code></pre><p>    替换环绕<br>&lt;aop:around method=”myAround” pointcut-ref=”myPointCut”/&gt;</p>
+<p>@Around(value = “myPointCut()”)<br>    public Object myAround(ProceedingJoinPoint joinPoint) throws Throwable{<br>        System.out.println(“前”);<br>        //手动执行目标方法<br>        Object obj = joinPoint.proceed();</p>
+<pre><code>    System.out.println(&quot;后&quot;);
+    return obj;
+}
+</code></pre><p>    替换抛出异常<br>&lt;aop:after-throwing method=”myAfterThrowing” pointcut=”execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))” throwing=”e”/&gt;</p>
+<p>@AfterThrowing(value=”execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))” ,throwing=”e”)<br>    public void myAfterThrowing(JoinPoint joinPoint,Throwable e){<br>        System.out.println(“抛出异常通知 ： “ + e.getMessage());<br>    }</p>
+<p>3.6.3    切面类<br>/**</p>
+<ul>
+<li><p>切面类，含有多个通知<br>*/<br>@Component<br>@Aspect<br>public class MyAspect {</p>
+<p> //切入点当前有效<br>//    @Before(“execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))”)<br> public void myBefore(JoinPoint joinPoint){</p>
+<pre><code>System.out.println(&quot;前置通知 ： &quot; + joinPoint.getSignature().getName());
+</code></pre><p> }</p>
+<p> //声明公共切入点<br> @Pointcut(“execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))”)<br> private void myPointCut(){<br> }</p>
+</li>
+</ul>
+<p>//    @AfterReturning(value=”myPointCut()” ,returning=”ret”)<br>    public void myAfterReturning(JoinPoint joinPoint,Object ret){<br>        System.out.println(“后置通知 ： “ + joinPoint.getSignature().getName() + “ , –&gt;” + ret);<br>    }</p>
+<p>//    @Around(value = “myPointCut()”)<br>    public Object myAround(ProceedingJoinPoint joinPoint) throws Throwable{<br>        System.out.println(“前”);<br>        //手动执行目标方法<br>        Object obj = joinPoint.proceed();</p>
+<pre><code>    System.out.println(&quot;后&quot;);
+    return obj;
+}
+</code></pre><p>//    @AfterThrowing(value=”execution(<em> com.itheima.d_aspect.b_anno.UserServiceImpl.</em>(..))” ,throwing=”e”)<br>    public void myAfterThrowing(JoinPoint joinPoint,Throwable e){<br>        System.out.println(“抛出异常通知 ： “ + e.getMessage());<br>    }</p>
+<pre><code>@After(&quot;myPointCut()&quot;)
+public void myAfter(JoinPoint joinPoint){
+    System.out.println(&quot;最终通知&quot;);
+}
+</code></pre><p>}</p>
+<p>3.6.4    spring配置<br><!-- 1.扫描 注解类 --><br>    &lt;context:component-scan base-package=”com.itheima.d_aspect.b_anno”&gt;&lt;/context:component-scan&gt;</p>
+<pre><code>&lt;!-- 2.确定 aop注解生效 --&gt;
+&lt;aop:aspectj-autoproxy&gt;&lt;/aop:aspectj-autoproxy&gt;
+</code></pre><p>3.6.5    aop注解总结<br>@Aspect  声明切面，修饰切面类，从而获得 通知。<br>通知<br>    @Before 前置<br>    @AfterReturning 后置<br>    @Around 环绕<br>    @AfterThrowing 抛出异常<br>    @After 最终<br>切入点<br>    @PointCut ，修饰方法 private void xxx(){}  之后通过“方法名”获得切入点引用</p>
+<p>4    JdbcTemplate<br>    spring 提供用于操作JDBC工具类，类似：DBUtils。<br>    依赖 连接池DataSource （数据源）</p>
+<p>4.1    环境搭建<br>4.1.1    创建表<br>create database ee19_spring_day02;<br>use ee19_spring_day02;<br>create table t_user(<br>  id int primary key auto_increment,<br>  username varchar(50),<br>  password varchar(32)<br>);</p>
+<p>insert into t_user(username,password) values(‘jack’,’1234’);<br>insert into t_user(username,password) values(‘rose’,’5678’);</p>
+<p>4.1.2    导入jar包</p>
+<p>4.1.3    javabean<br>package com.itheima.domain;</p>
+<p>public class User {</p>
+<pre><code>private Integer id;
+private String username;
+private String password;
+</code></pre><p>4.2    使用api（了解）<br>public static void main(String[] args) {</p>
+<pre><code>    //1 创建数据源（连接池） dbcp
+    BasicDataSource dataSource = new BasicDataSource();
+    // * 基本4项
+    dataSource.setDriverClassName(&quot;com.mysql.jdbc.Driver&quot;);
+    dataSource.setUrl(&quot;jdbc:mysql://localhost:3306/ee19_spring_day02&quot;);
+    dataSource.setUsername(&quot;root&quot;);
+    dataSource.setPassword(&quot;1234&quot;);
+
+
+    //2  创建模板
+    JdbcTemplate jdbcTemplate = new JdbcTemplate();
+    jdbcTemplate.setDataSource(dataSource);
+
+
+    //3 通过api操作
+    jdbcTemplate.update(&quot;insert into t_user(username,password) values(?,?);&quot;, &quot;tom&quot;,&quot;998&quot;);
+
+}
+</code></pre><p>4.3    配置DBCP<br><!-- 创建数据源 --><br>    <bean id="dataSourceId" class="org.apache.commons.dbcp.BasicDataSource"><br>        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property><br>        <property name="url" value="jdbc:mysql://localhost:3306/ee19_spring_day02"></property><br>        <property name="username" value="root"></property><br>        <property name="password" value="1234"></property><br>    </bean><br>    <!-- 创建模板 ,需要注入数据源--><br>    <bean id="jdbcTemplateId" class="org.springframework.jdbc.core.JdbcTemplate"><br>        <property name="dataSource" ref="dataSourceId"></property><br>    </bean></p>
+<pre><code>&lt;!-- 配置dao --&gt;
+&lt;bean id=&quot;userDaoId&quot; class=&quot;com.itheima.c_dbcp.UserDao&quot;&gt;
+    &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplateId&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>4.4    配置C3P0<br><!-- 创建数据源 c3p0--><br>    <bean id="dataSourceId" class="com.mchange.v2.c3p0.ComboPooledDataSource"><br>        <property name="driverClass" value="com.mysql.jdbc.Driver"></property><br>        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/ee19_spring_day02"></property><br>        <property name="user" value="root"></property><br>        <property name="password" value="1234"></property><br>    </bean></p>
+<p>4.5    使用JdbcDaoSupport 全自动<br>JdbcDaoSupport中通过数据源创建了jdbcTemplate模板<br>4.5.1    dao层</p>
+<p>4.5.2    spring配置文件<br>    <!-- 创建数据源 --><br>    <bean id="dataSourceId" class="org.apache.commons.dbcp.BasicDataSource"><br>        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property><br>        <property name="url" value="jdbc:mysql://localhost/ee19_spring_day02"></property><br>        <property name="username" value="root"></property><br>        <property name="password" value="382576883"></property><br>    </bean><br>&lt;!– 配置dao </p>
+<pre><code>    * dao 继承 JdbcDaoSupport，之后只需要注入数据源，底层将自动创建模板--&gt;
+&lt;bean id=&quot;userDaoId&quot; class=&quot;com.itheima.e_jdbcdaosupport.UserDao&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSourceId&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>4.5.3    源码分析</p>
+<p>4.6    配置properties<br>4.6.1    properties文件<br>jdbc.driverClass=com.mysql.jdbc.Driver<br>jdbc.jdbcUrl=jdbc:mysql://localhost:3306/ee19_spring_day02<br>jdbc.user=root<br>jdbc.password=1234</p>
+<p>4.6.2    spring配置<br><!-- 加载配置文件 
+        "classpath:"前缀表示 src下
+        在配置文件之后通过  ${key} 获得内容
+    --><br>    &lt;context:property-placeholder location=”classpath:com/itheima/f_properties/jdbcInfo.properties”/&gt;</p>
+<pre><code>&lt;!-- 创建数据源 c3p0--&gt;
+&lt;bean id=&quot;dataSourceId&quot; class=&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;
+    &lt;property name=&quot;driverClass&quot; value=&quot;${jdbc.driverClass}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;jdbcUrl&quot; value=&quot;${jdbc.jdbcUrl}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;user&quot; value=&quot;${jdbc.user}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;password&quot;  value=&quot;${jdbc.password}&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>5    要求</p>
+<pre><code>properties +  JdbcDaoSupport  + c3p0
+UserDao  --&gt; api ( update / query  / queryForObject)
+</code></pre>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/07/11/spring教程（三）/" class="pre-post btn btn-default" title='spring教程（三）'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">spring教程（三）</span>
+        </a>
+    
+    
+        <a href="/2018/07/11/spring教程（一）/" class="next-post btn btn-default" title='spring教程（一）'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">spring教程（一）</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

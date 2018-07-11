@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>spring总结 | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/lujiao.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="spring总结">
+            
+	            spring总结
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/11</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>1    配置文件<br>1.1    spring<br>1.1.1    配置数据源<br>    加载properties &lt;context:property-placeholder location=””&gt;<br>    连接池DataSource  ：ComboPooledDataSource  / BasicDataSource<br><!-- 公共配置项 --><br>    <!-- 1.1 加载properties文件 --><br>    &lt;context:property-placeholder location=”classpath:jdbcInfo.properties”/&gt;</p>
+<pre><code>&lt;!-- 1.2 配置数据源 --&gt;
+&lt;bean id=&quot;dataSource&quot; class=&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;
+    &lt;property name=&quot;driverClass&quot; value=&quot;${jdbc.driverClass}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;jdbcUrl&quot; value=&quot;${jdbc.jdbcUrl}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;user&quot; value=&quot;${jdbc.user}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;password&quot; value=&quot;${jdbc.password}&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>1.1.2    配置Session工厂<br>    工厂bean 创建Session工厂：LocalSessionFactoryBean<br><!-- 2. 配置SessionFactory --><br>    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"><br>        <property name="dataSource" ref="dataSource"></property><br>        <property name="hibernateProperties"><br>            <props><br>                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop><br>                <prop key="hibernate.show_sql">true</prop><br>                <prop key="hibernate.format_sql">true</prop><br>            </props><br>        </property><br>        <property name="mappingLocations" value="classpath:com/itheima/crm/*/domain/*.hbm.xml"></property><br>    </bean></p>
+<p>1.1.3    事务<br>    事务管理器<br>    Hibernate –》 HibernateTransactionManager<br>    JDBC –&gt; DataSourceTransactionManager<br>    事务详情&lt;tx:advice id=”” transaction-manager=””&gt;<br>        <a href="tx:attribute" target="_blank" rel="noopener">tx:attribute</a>  &lt;tx:method=”” 传播行为、隔离级别、是否只读、异常&gt;<br>    aop编程，事务通知应用到目标类<a href="aop:config" target="_blank" rel="noopener">aop:config</a>  <a href="aop:advisor" target="_blank" rel="noopener">aop:advisor</a><br><!-- 3.事务管理 --><br>    <!-- 3.1 事务管理器 --><br>    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"><br>        <property name="sessionFactory" ref="sessionFactory"></property><br>    </bean><br>    &lt;!– 3.2 事务详情  </p>
+<pre><code>    * 增删改：读写；查询：只读
+--&gt;
+&lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;txManager&quot;&gt;
+    &lt;tx:attributes&gt;
+        &lt;tx:method name=&quot;add*&quot;/&gt;
+        &lt;tx:method name=&quot;update*&quot;/&gt;
+        &lt;tx:method name=&quot;delete*&quot;/&gt;
+        &lt;tx:method name=&quot;login&quot; read-only=&quot;true&quot;/&gt;
+        &lt;tx:method name=&quot;find*&quot; read-only=&quot;true&quot;/&gt;
+    &lt;/tx:attributes&gt;
+&lt;/tx:advice&gt;
+&lt;!-- 3.3 aop编程  
+    * 强制cglib ：  proxy-target-class=&quot;true&quot;
+--&gt;
+&lt;aop:config&gt;
+    &lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut=&quot;execution(* com.itheima.crm.*.service..*.*(..))&quot;/&gt;
+&lt;/aop:config&gt;
+</code></pre><p>1.1.4    基本配置<br>    创建一个对象 <bean id="" class="" scope="" init-method="" destroy-method=""><br>    注入：<property name="" value="" ref=""></property></bean></p>
+<bean id="staffDao" class="com.itheima.crm.staff.dao.impl.StaffDaoImpl"><br>        <property name="sessionFactory" ref="sessionFactory"></property><br>    </bean>
+
+<pre><code>&lt;bean id=&quot;staffService&quot; class=&quot;com.itheima.crm.staff.service.impl.StaffServiceImpl&quot;&gt;
+    &lt;property name=&quot;staffDao&quot; ref=&quot;staffDao&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p>1.1.5    延迟session关闭 web.xml<br>    OpenSessionInViewFilter  配置过滤器 /<em><br><!-- spring 过滤器，延迟session关闭 --><br>   <filter><br>      <filter-name>openSession</filter-name><br>      <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class><br>  </filter><br>  <filter-mapping><br>      <filter-name>openSession</filter-name><br>      <url-pattern>/</url-pattern></filter-mapping></em><br>  </p>
+<p>1.1.6    tomcat启动加载xml<br>    配置监听器 ContextLoaderListener<br>    配置xml位置：contextConfigLocation<br>&lt;!– 1.1 spring配置文件位置 </p>
+<pre><code>* 方式1： 【建议】
+    &lt;param-value&gt;classpath:spring/applicationContext.xml&lt;/param-value&gt;
+    需要在applicationContext.xml 配置&lt;import&gt; 导入其他
+* 方式2：
+    &lt;param-value&gt;classpath:spring/applicationContext*.xml&lt;/param-value&gt;
+    加载所有，不需要配置&lt;import&gt;
+</code></pre><p>  –&gt;<br>  <context-param><br>      <param-name>contextConfigLocation</param-name><br>      <param-value>classpath:spring/applicationContext.xml</param-value><br>  </context-param><br>  <!-- 1.2 加载spring配置文件使用监听器 --><br>  <listener><br>      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class><br>  </listener></p>
+<p>1.2    hibernate 映射<br>    对象和表对应<class name="" table=""><br>    主键 <id> <generator class="uuid native "><br>    其他属性<property name="" length="" not-null="true" unique="true"><br>        <column sql-type=""><br>    关联操作<br>    一对多：<set fetch="join / select / subselect " lazy="false / true / extra"><br>    多对一：<many-to-one fetch="join / select" lazy="false / proxy / no-proxy"></many-to-one></set></column></property></generator></id></class></p>
+<p>    建议：一对多和多对多配置</p>
+<p>1.3    struts<br>1.3.1    前端控制器<br>    StrutsPrepareAndExecuteFilter  （struts-2.3.15.3\apps\struts2-blank\struts2-blank\WEB-INF\web.xml）<br><!-- 2 struts 前端控制器 --><br>  <filter><br>      <filter-name>struts2</filter-name><br>      <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class><br>  </filter><br>  <filter-mapping><br>      <filter-name>struts2</filter-name><br>      <url-pattern>/*</url-pattern><br>  </filter-mapping></p>
+<p>1.3.2    struts 包</p>
+<p><package name="my" extends="struts-default"></package></p>
+<p><package name="" extends="my">  注意：package.name 不能重名</package></p>
+<package name="cla" namespace="/" extends="common">
+
+
+<p>1.3.3    struts action</p>
+<action name="xxx_*" class="" method="{1}"><br>    <result name="" type="">….<br>UIAction 配置<br><action name="uiAction_*_*"><br>            <result>/WEB-INF/pages/{1}/{2}.jsp</result><br>        </action>
+
+<p>1.3.4    拦截器配置<br>拦截器栈：多个拦截器组合<br>给拦截器栈中拦截器注入：拦截器名称.属性 </p>
+<interceptors><br>            <!-- @1)声明（注册） --><br>            <interceptor name="loginInterceptor" class="com.itheima.crm.web.interceptor.LoginInterceptor"></interceptor><br>            <!-- @2)自定义拦截器栈 --><br>            <interceptor-stack name="loginStack"><br>                <!-- 给拦截器栈中的某一个拦截器注入内容时，
+                    格式：拦截器.属性 = 值
+                --><br>                <interceptor-ref name="defaultStack"><br>                    <param name="fileUpload.allowedExtensions">.xls,.xlsx<br>                </interceptor-ref><br>                <!-- 自定义拦截需要进行login不进行拦截
+                    * excludeMethods 配置不包含的方法，多个方法使用逗号分隔
+                --><br>                <interceptor-ref name="loginInterceptor"><br>                    <param name="excludeMethods">login<br>                </interceptor-ref><br>            </interceptor-stack><br>        </interceptors>
+
+<pre><code>&lt;!-- @3)声明默认 --&gt;
+&lt;default-interceptor-ref name=&quot;loginStack&quot;&gt;&lt;/default-interceptor-ref&gt;
+</code></pre><p>2    错误总结</p>
+</result></action></package>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/07/11/spring教程（四）/" class="next-post btn btn-default" title='spring教程（四）'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">spring教程（四）</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
