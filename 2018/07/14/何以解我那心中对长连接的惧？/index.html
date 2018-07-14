@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>何以解我那心中对长连接的惧？ | Hexo</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/lujiao.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="何以解我那心中对长连接的惧？">
+            
+	            何以解我那心中对长连接的惧？
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/14</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>与高人沟通，是最好的成长，解我那心中对长连接的惧！</p>
+<pre><code> 一直以来，我对长连接都是怀着深深地恐惧。因为在我的印象中，如果每个用户都保持长连接，那么，假设有稀稀松松有几个用户来到你的服务面前，那么你的并发瞬间就飚高了，那么你的服务能力一下就下去了。所以，我害怕，害怕啥事没干，服务就被干垮了！
+
+长连接与短连接的概念：前者是整个通讯过程，客户端和服务端只用一个Socket对象，长期保持Socket的连接；后者是每次请求，都新建一个Socket,处理完一个请求就直接关闭掉Socket。所以，其实区分长短连接就是：整个客户和服务端的通讯过程是利用一个Socket还是多个Socket进行的。
+
+ 长连接的好处：最大的好处就是让服务器知道客户端在哪里（个人感觉），可以随时向客户端发送消息。最大二好处是，省去了每次建立连接时的性能破费，c/s互发消息，直接复用原来建立的连接即可，无需再进行三次握手啥的。坏处自然也明显，也就是我一直以来担心的，能力下降得厉害，（当然还得看业务场景）。因为我做的业务都是，请求应答型的业务，所以，针对这种场景，并发数取决于实时请求的人数。此时，如果使用长连接，就会导致很多无用的客户端也被当作了并发的来源了，所以服务能力一下子就下来了。最终的结果就是，没几个业务就把自己干死了，所以我是真虚啊。
+
+ 短连接就比较方便了，需要我就请求，不需要就关闭，用完就走。缺点就是，每次请求时，需要耗费力气去重新建立连接，然后才能与服务端通信。所以，短连接的单个操作性能是很差的。（遇到连续n个请求发出时，负担就比较可观了，当然还是有其他解决办法的，如设置较短的超时关闭时间）
+
+那么，回到我的担心：如果都用长连接，后备服务器得准备多少啊？比如，我有100w的uv。往最坏了打算，有多少uv就保持多少连接，咱们来算算。为了保持100w的连接，咱们单机自然是做不了，所以就要测算单机的最大连接数能保持多少，假设单机服务能力为最大保持2000连接（这个值不大，也不小），那么，为了保持100w的能力，咱们就必须至少要有500台服务器存在，这是在完全没有任何灾备，满打满算得到的，否则的话就得更多了。服务器台数嘛说多也不多，还行吧，咱们先说到这里。
+
+咱们再来假设一个不合宜的场景，咱们100w的uv，买了那么多的服务器，假设咱们的pv是200w，也就是每个客户端就访问了2次服务端。200w/24h/3600s=2.314814814814815。即咱们的平均并发数为2.32，看到了吧，这是什么概念，我们同时就2-3个人访问了有用的东西，为此我们却付出了惨重的代价。当然，这也是我以前的算盘，这导致了我对长连接的恐惧。
+
+ 然而，算盘是不该这么打的。如果真这么干的话，老板绝对第一个把你干掉。当然，你还有有个挽回的办法，就是去把你的用户都激活了，求求你们，一直操作吧，这样我们的服务器就不会浪费了。嘿嘿，想得美。
+
+ 所谓的长连接，其实也只是相对的，即你有活动时，保持真正的长连接，如果很长时间你都没有真实操作了，那么，仍然把你的连接给你断掉，这样压力不就下来了嘛。再回头看一下刚才那个场景，每个ip就访问了2次有效数据，那么过一会我就把你连接给你断掉，到最后，都把连接关完了，咱们又满血复活了，100w的能力回来了。
+
+我靠，不会吧，这么牛逼的招数，你想过后果没？后续你服务端怎么给客户端发消息？是的，这是个难题。但是，解决方案总是有的。那就是找个替代者嘛你的连接断开了，就另外去找一个保持了连接的点嘛，让他来代替你找到客户端，把消息发过去就ok了。看起来很完美！那么问题来了，怎么样去找到这样的一个点呢？这个，确实有点难，各个设备的找寻方式是不一样的，比如苹果手机，那么这个点就是苹果的总服务器，如果是华为手机，那么就变成了华为的总服务器了，而pc呢，这个我也不知道了，求你告诉我，哈哈！当客户端收到这个消息后，再次主动建立一个通道连接，然后又开始愉快的沟通生活了，如此反复。
+
+那么，通过以上方式，咱们就解决了长连接带来的问题，是不是很happy啊。
+
+在业务量很大的时候，其实咱们就不应该考虑成本问题了，比如你想做及时通讯，却又不愿付长连接一字带来的成本，那就麻烦了（当然了，有厂商愿意给你做，只要你有钱）。再比如你的业务量很大，但是你却不愿意付出很多的存储服务器来存放用户的各种行为数据，或者其他流水数据，老是想着怎样省这一毛两毛的存储费用。这活咱就别干了，越到后面，数据就越是宝贵的资源，所以，有用的数据你就存吧，别整那些没用的。宽带不够，咱们用户量够大，咱们就加吧，这种好事咱别求！
+</code></pre>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/07/14/linux常用命令/" class="pre-post btn btn-default" title='linux常用命令'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">linux常用命令</span>
+        </a>
+    
+    
+        <a href="/2018/07/14/long/" class="next-post btn btn-default" title='Command line is too long'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Command line is too long</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
